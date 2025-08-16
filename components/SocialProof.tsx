@@ -9,7 +9,7 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "/assets/imgs/C6_light-grey.png",
+    image: "../assets/imgs/C6_light-grey.png",
     title: "Upskill managers who are technically strong but need leadership skills using Evro.",
     description:
       "Named the Top Strategic Tech Trend of 2025 by Gartner, Dayos leads the way in Agentic AI for the enterprise business apps.",
@@ -17,7 +17,7 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "/assets/imgs/C7_light-grey.png",
+    image: "../assets/imgs/C7_light-grey.png",
     title: "Achieve compliance with new WHS psychosocial hazard legislation using Evro.",
     description:
       'Keep your current MSP for "Keeping the Lights On" and let Dayos step in for advanced support, integrations, and enhancements.\n\nWith no long-term contracts and flexible budgeting, Dayos On-Demand ensures your operations are always equipped for success—no matter the challenge.',
@@ -25,29 +25,13 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "/assets/imgs/C1_light-grey.png",
+    image: "../assets/imgs/C1_light-grey.png",
     title:
       "Reliably quantify VOI/ROI to validate the business impact of people development initiatives using Evro.",
     description:
       "Experience an accelerated close process and cost savings beyond your ERP system with our AI month-end close agent.",
   },
 ];
-
-const PauseIcon = () => (
-  <svg width='12' height='12' viewBox='0 0 12 12' fill='none'>
-    <path d='M4.125 10.5V1.5' stroke='black' strokeWidth='2' strokeLinecap='round' />
-    <path d='M7.875 10.5V1.5' stroke='black' strokeWidth='2' strokeLinecap='round' />
-  </svg>
-);
-
-const PlayIcon = () => (
-  <svg width='12' height='12' viewBox='0 0 14 16' fill='none'>
-    <path
-      d='M12.583 6.54135C13.9437 7.31802 13.9437 9.18198 12.583 9.95865L3.49968 15.3562C2.13899 16.1328 0.499677 15.201 0.499677 13.6272V2.87281C0.499678 1.29898 2.139 0.367151 3.49968 1.14382L12.583 6.54135Z'
-      fill='black'
-    />
-  </svg>
-);
 
 const ArrowIcon = () => (
   <svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
