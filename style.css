@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "SuisseIntl-Regular";
+  src: url("./assets/fonts/SuisseIntl-Regular.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntl-Medium";
+  src: url("./assets/fonts/SuisseIntl-Medium.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntlCond-Bold";
+  src: url("./assets/fonts/SuisseIntlCond-Bold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SuisseIntlMono-Regular";
+  src: url("./assets/fonts/SuisseIntlMono-Regular.otf");
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "SuisseIntl-Regular";
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.font-heading {
+  font-family: "SuisseIntlCond-Bold";
+}
+
+/* --- Section Styling --- */
+#hero-section {
+  background-color: #f3f4f6;
+  color: #000;
+}
+
+#problem-section,
+#features-section,
+#backed-by-section,
+#faq-section,
+#contact-section {
+  background-color: #000;
+  color: #fff;
+}
+
+#process-section,
+#use-cases-section,
+#cta-section {
+  background-color: #fff;
+  color: #000;
+}
+
+#playground-section,
+#social-proof-section,
+#newsletter-section {
+  background-color: #fff;
+  color: #000;
+}
+
+/* --- Content Animation --- */
+.anim-reveal {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+}
+
+/* Entrance Animation */
+section.is-visible .anim-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--delay, 0s);
+}

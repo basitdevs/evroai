@@ -1,0 +1,161 @@
+import React from "react";
+import { FiArrowUp, FiLinkedin, FiTwitter, FiYoutube } from "react-icons/fi";
+
+// The DayosLogo component provided by the user, renders "Evro" text
+const DayosLogo = () => (
+  <div className='flex-shrink-0'>
+    <a href='#' className={`text-[40px] font-bold tracking-[0.5px] transition-all duration-300`}>
+      EvroAI
+    </a>
+  </div>
+);
+
+// The footerLinks data provided by the user
+const footerLinks = [
+  {
+    links: ["Linkedin", "Trust Centre", "Privacy", "Terms"],
+  },
+  {
+    links: ["Want product", "updates and AI", "resources?", "Subscribe here →", "Newsletter"],
+  },
+];
+
+export const Footer = React.memo(() => {
+  return (
+    <footer className='bg-black text-white '>
+      <div className='mx-auto px-8 sm:px-6 lg:px-10 pt-8 md:pt-20 pb-10 max-w-[1550px]'>
+        <div className='flex flex-col lg:flex-row justify-between'>
+          <div className='w-full lg:w-1/4'>
+            <div className='flex justify-between '>
+              <DayosLogo />
+              <a href='#' className='md:hidden cursor-pointer flex items-center gap-3 text-sm'>
+                Back to top
+                <span className='bg-white rounded-[8px] w-7 h-7 flex items-center justify-center text-black'>
+                  <FiArrowUp size={14} />
+                </span>
+              </a>
+            </div>
+
+            {/* Contact info for Desktop (visible only on large screens, positioned below logo) */}
+            <div className='mt-6 hidden lg:block'>
+              <p className='text-[18px]'>Have questions or want to chat?</p>
+              <p className='text-[18px] mt-1'>
+                Drop us a line →
+                <a href='mailto:hello@evro.ai' className='text-yellow-400 ml-[5px]'>
+                  hello@evro.ai
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className='w-full lg:w-3/4 flex flex-wrap justify-start lg:justify-between lg:pl-32 mt-8 lg:mt-0'>
+            <div className='w-1/2 md:w-1/4 mb-8 lg:mb-0'>
+              <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>Platform</h3>
+              <ul className='space-y-1'>
+                {footerLinks[0]?.links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href='#'
+                      className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 2: Business Functions (using footerLinks[1] from your provided data) */}
+            <div className='w-1/2 md:w-1/4 mb-8 lg:mb-0'>
+              <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>Business Functions</h3>
+              <ul className='space-y-1'>
+                {footerLinks[1]?.links.map((link) => (
+                  <li key={link}>
+                    <a
+                      href='#'
+                      className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact info for Mobile/Tablet (visible only on non-large screens, positioned below links) */}
+            <div className='mt-3 block lg:hidden w-full'>
+              <p className='text-[12px]'>Have questions or want to chat?</p>
+              <p className='text-[12px] mt-1'>
+                Drop us a line →{" "}
+                <a href='mailto:hello@evro.ai' className='text-yellow-400 pl-0.5'>
+                  hello@evro.ai
+                </a>
+              </p>
+            </div>
+
+            {/* Original span from provided code, hidden on small screens to avoid duplicate content display on desktop */}
+            <span className='hidden lg:block w-[130px] text-base text-neutral-300 hover:text-white leading-[1.5] mt-8 lg:mt-0'>
+              Evro AI Pty Ltd © 2025 | All rights reserve
+            </span>
+          </div>
+        </div>
+
+        <div className='mt-12 md:mt-28 flex flex-col lg:flex-row items-start lg:items-end justify-between font-mono text-xs text-neutral-400 gap-8 lg:gap-4'>
+          <div className='hidden lg:flex flex-col gap-16 order-1'>
+            <a href='#' className='flex items-center cursor-pointer gap-3 text-sm'>
+              <span className='bg-white rounded-xl w-9 h-9 flex items-center justify-center text-black'>
+                <FiArrowUp size={16} />
+              </span>
+              Back to top
+            </a>
+            {/* Copyright text for Desktop */}
+            <p className='text-[12px]'>Dayos © 2025 | All rights reserved {/* Matches image */}</p>
+          </div>
+
+          {/* <div className='w-full sm:w-auto flex flex-row gap-12 md:gap-16 order-3 lg:order-2 justify-between'>
+            <address className='not-italic leading-relaxed'>
+              400 Concar Drive
+              <br />
+              San Mateo, CA
+              <br />
+              94402, USA
+            </address>
+            <address className='not-italic leading-relaxed'>
+              15 Beach Road,
+              <br />
+              2nd Floor
+              <br />
+              Singapore, 189677
+            </address>
+          </div> */}
+
+          <p className='block lg:hidden text-[12px] order-4'>
+            Dayos © 2025 | All rights reserved {/* Matches image */}
+          </p>
+
+          <div className='flex flex-col items-start lg:items-end gap-5 order-5 lg:order-3'>
+            <div className='flex space-x-4'>
+              <a href='#' aria-label='LinkedIn'>
+                <FiLinkedin size={20} />
+              </a>
+              <a href='#' aria-label='X'>
+                <FiTwitter size={20} />
+              </a>
+              <a href='#' aria-label='YouTube'>
+                <FiYoutube size={20} />
+              </a>
+            </div>
+            <div className='text-left lg:text-right space-y-2'>
+              <a href='#' className='block'>
+                Online Terms of Service
+              </a>
+              <a href='#' className='block'>
+                Privacy Statement
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+});
