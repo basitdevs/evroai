@@ -26,17 +26,17 @@ const heroFeatures = [
   {
     title: "No calls to HR",
     text: "AI provides support for complex and high stakes conversations.",
-    img: "../assets/imgs/orange-sphere.png",
+    img: "/imgs/orange-sphere.png",
   },
   {
     title: "No boring L&D",
     text: "Skills are taught in the flow of work via Teams and Slack using AI coaching. ",
-    img: "../assets/imgs/aqua-cube.png",
+    img: "/imgs/aqua-cube.png",
   },
   {
     title: "No waiting",
     text: "No waiting for performance reviews. AI provides instant objective data based on the actual situation.",
-    img: "../assets/imgs/purple-hemisphere.png",
+    img: "/imgs/purple-hemisphere.png",
   },
 ];
 

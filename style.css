@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: "SuisseIntl-Regular";
-  src: url("./assets/fonts/SuisseIntl-Regular.otf");
+  src: url("/fonts/SuisseIntl-Regular.otf");
   font-display: swap;
 }
 @font-face {
   font-family: "SuisseIntl-Medium";
-  src: url("./assets/fonts/SuisseIntl-Medium.otf");
+  src: url("/fonts/SuisseIntl-Medium.otf");
   font-display: swap;
 }
 @font-face {
   font-family: "SuisseIntlCond-Bold";
-  src: url("./assets/fonts/SuisseIntlCond-Bold.otf");
+  src: url("/fonts/SuisseIntlCond-Bold.otf");
   font-display: swap;
 }
 @font-face {
   font-family: "SuisseIntlMono-Regular";
-  src: url("./assets/fonts/SuisseIntlMono-Regular.otf");
+  src: url("/fonts/SuisseIntlMono-Regular.otf");
   font-display: swap;
 }
 

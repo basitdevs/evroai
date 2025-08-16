@@ -9,7 +9,7 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "../assets/imgs/C6_light-grey.png",
+    image: "/imgs/C6_light-grey.png",
     title: "Upskill managers who are technically strong but need leadership skills using Evro.",
     description:
       "Named the Top Strategic Tech Trend of 2025 by Gartner, Dayos leads the way in Agentic AI for the enterprise business apps.",
@@ -17,7 +17,7 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "../assets/imgs/C7_light-grey.png",
+    image: "/imgs/C7_light-grey.png",
     title: "Achieve compliance with new WHS psychosocial hazard legislation using Evro.",
     description:
       'Keep your current MSP for "Keeping the Lights On" and let Dayos step in for advanced support, integrations, and enhancements.\n\nWith no long-term contracts and flexible budgeting, Dayos On-Demand ensures your operations are always equipped for success—no matter the challenge.',
@@ -25,7 +25,7 @@ const slidesData = [
   {
     bgColor: "",
     imagePanelBg: "",
-    image: "../assets/imgs/C1_light-grey.png",
+    image: "/imgs/C1_light-grey.png",
     title:
       "Reliably quantify VOI/ROI to validate the business impact of people development initiatives using Evro.",
     description:
