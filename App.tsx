@@ -65,13 +65,13 @@ function App() {
   }, []);
 
   return (
-    <div className="antialiased">
+    <div className='antialiased'>
       <Header backgroundColor={headerBgColor} />
-      <main className="bg-[#E9E9E9]">
-        <Hero id="hero-section" ref={sectionRefs[0]} />
-        <Problem id="problem-section" ref={sectionRefs[1]} />
-        <div className="bg-black z-[55]">
-          <SocialProof id="social-proof-section" ref={sectionRefs[2]} />
+      <main className='bg-[#E9E9E9]'>
+        <Hero id='hero-section' ref={sectionRefs[0]} />
+        <Problem id='problem-section' ref={sectionRefs[1]} />
+        <div className='bg-black z-[55]'>
+          <SocialProof id='social-proof-section' ref={sectionRefs[2]} />
         </div>
         <SkillsCards />
         <Business />

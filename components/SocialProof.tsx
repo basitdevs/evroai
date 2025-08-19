@@ -63,7 +63,7 @@ export const SocialProof = React.forwardRef<HTMLElement, { id: string }>(({ id }
     <section
       id={id}
       ref={ref}
-      className='rounded-t-[40px] md:rounded-t-[50px] bg-white text-black py-12 md:py-[85px]'
+      className='rounded-t-[40px] md:rounded-t-[50px] bg-white text-black py-12 md:py-[85px] md:pt-[100px]'
     >
       <div className='max-w-[1550px] px-8 sm:px-6 mx-auto mb-12 md:mb-16'>
         <h2 className='text-[28px] md:text-[48px] font-bold'>How Companies Use Evro</h2>
@@ -105,9 +105,9 @@ export const SocialProof = React.forwardRef<HTMLElement, { id: string }>(({ id }
                   {/* <p className='whitespace-pre-line text-black text-base md:text-neutral-800 md:text-[14px] leading-[1.1] md:mt-4'>
                     {slide.description}
                   </p> */}
-                  <button className='hidden md:block mt-5 md:mt-6 bg-black text-white text-xs md:text-sm font-semibold px-4 py-2 md:px-5 md:py-3 rounded-lg self-start hover:bg-neutral-800 transition-colors'>
+                  {/* <button className='hidden md:block mt-5 md:mt-6 bg-black text-white text-xs md:text-sm font-semibold px-4 py-2 md:px-5 md:py-3 rounded-lg self-start hover:bg-neutral-800 transition-colors'>
                     More details
-                  </button>
+                  </button> */}
                 </div>
                 <div
                   className={`bg-[#EAEAEA] flex items-center justify-center min-h-[250px] h-[300px] md:h-[600px]`}

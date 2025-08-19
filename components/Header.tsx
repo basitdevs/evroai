@@ -18,7 +18,11 @@ const DayosLogo = ({ isDark }) => (
         isDark ? "text-white" : "text-black"
       }`}
     >
-      EvroAI
+      <img
+        src='/logo.png'
+        alt='EvroAI Logo'
+        className='h-[30px] w-auto transition-all duration-300 '
+      />
     </a>
   </div>
 );
@@ -81,6 +85,8 @@ export const Header = React.memo(({ backgroundColor }) => {
                   <a
                     key={link.name}
                     href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : "_self"}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className={`font-medium text-sm px-2 py-1 ${
                       isDarkBg
                         ? "text-neutral-400 hover:text-white"
@@ -94,9 +100,10 @@ export const Header = React.memo(({ backgroundColor }) => {
             </nav>
 
             <a
-              href='#'
+              href='https://forms.fillout.com/t/5L468P5Xptus'
+              // target='_blank'
               className={`${getStartedClasses} text-base px-4 py-2 ${
-                isDarkBg ? "bg-yellow-400 text-black" : "bg-black text-white"
+                isDarkBg ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >
               Get Started
@@ -122,7 +129,11 @@ export const Header = React.memo(({ backgroundColor }) => {
               <RxCross2 size={32} />
             </button>
             <DayosLogo isDark={true} />
-            <a href='#' className={`${getStartedClasses} text-[12px] text-black  px-5 py-2.5`}>
+            <a
+              href='https://forms.fillout.com/t/5L468P5Xptus'
+              // target='_blank'
+              className={`${getStartedClasses} text-[12px] text-black  px-5 py-2.5`}
+            >
               Get Started
             </a>
           </div>
@@ -132,7 +143,12 @@ export const Header = React.memo(({ backgroundColor }) => {
             <div className='space-y-8'>
               {desktopNavLinks.map((item, index) => (
                 <div key={index}>
-                  <a href={item.href} className='flex justify-between items-center w-full mb-3'>
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : "_self"}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className='flex justify-between items-center w-full mb-3'
+                  >
                     <h3 className='text-xl font-bold text-neutral-300'>{item.name}</h3>
                     <span className='text-neutral-400'>
                       <GoArrowRight />

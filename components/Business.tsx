@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { FiAlertTriangle, FiTarget } from "react-icons/fi";
-import { FaBrain } from "react-icons/fa";
+import { FaBrain, FaRegHeart } from "react-icons/fa";
 
 const cardData = [
   {
@@ -13,7 +13,7 @@ const cardData = [
     description:
       "Generic copilots reinforce user biases and misinterpret patterns, leading to poor decision-making.",
     icon: FiAlertTriangle,
-    gradient: "from-red-50 to-orange-50",
+    iconBg: "bg-red-50",
     iconColor: "text-red-500",
     borderColor: "border-red-100",
   },
@@ -21,17 +21,17 @@ const cardData = [
     title: "Surface-Level Analysis",
     description:
       "Surface-level advice fails to capture emotional, interpersonal, and cultural complexity.",
-    icon: FaBrain,
-    gradient: "from-blue-50 to-indigo-50",
-    iconColor: "text-blue-500",
-    borderColor: "border-blue-100",
+    icon: FaRegHeart,
+    iconBg: "bg-pink-50",
+    iconColor: "text-pink-500",
+    borderColor: "border-pink-100",
   },
   {
     title: "Flattery Over Accuracy",
     description:
       "LLMs flatter users and aren't built to diagnose human problems accurately and challenge users with emotional intelligence when necessary.",
     icon: FiTarget,
-    gradient: "from-purple-50 to-pink-50",
+    iconBg: "bg-purple-50",
     iconColor: "text-purple-500",
     borderColor: "border-purple-100",
   },
@@ -62,25 +62,27 @@ export default function Business() {
               return (
                 <div
                   key={index}
-                  className={`bg-gradient-to-br ${card.gradient} backdrop-blur-sm rounded-3xl p-8 transition-all duration-500 border-1 ${card.borderColor} hover:scale-[1.01] group relative overflow-hidden`}
+                  className={`bg-white rounded-3xl p-8 transition-all duration-500 border ${card.borderColor} shadow-sm hover:shadow-lg hover:scale-[1.02] group relative overflow-hidden`}
                 >
-                  <div className='absolute inset-0 bg-white/50 backdrop-blur-sm'></div>
-                  <div className='relative z-10 space-y-6'>
-                    <div
-                      className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/80 ${card.iconColor} shadow-sm group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <IconComponent size={28} />
-                    </div>
-                    <div className='space-y-3'>
-                      <h3 className='text-[34px] font-bold text-black font-heading'>
-                        {card.title}
-                      </h3>
-                      <p className='text-[20px] leading-[1.6] text-gray-700 font-medium'>
-                        {card.description}
-                      </p>
-                    </div>
+                  {/* Icon */}
+                  <div
+                    className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${card.iconBg} ${card.iconColor} shadow-sm group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <IconComponent size={28} />
                   </div>
-                  <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000'></div>
+
+                  {/* Title & Description */}
+                  <div className='mt-6 space-y-3'>
+                    <h3 className='text-[28px] font-bold text-gray-900 font-heading'>
+                      {card.title}
+                    </h3>
+                    <p className='text-[18px] leading-relaxed text-gray-600 font-medium'>
+                      {card.description}
+                    </p>
+                  </div>
+
+                  {/* Hover shine effect */}
+                  <div className='absolute inset-0 bg-gradient-to-r from-transparent via-gray-100/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000'></div>
                 </div>
               );
             })}

@@ -17,9 +17,12 @@ export const About = () => {
         </p>
 
         {/* CTA */}
-        <button className='px-7 py-3 bg-black text-white rounded-[8px] cursor-pointer text-[15px] md:text-[16px] font-medium shadow-md hover:bg-gray-800 hover:scale-105 transition-all duration-200'>
+        <a
+          href='https://forms.fillout.com/t/1YmZve4Fqdus'
+          className='px-7 py-3 bg-black text-white rounded-[8px] cursor-pointer text-[15px] md:text-[16px] font-medium shadow-md hover:bg-gray-800 hover:scale-105 transition-all duration-200'
+        >
           Start Free Trial
-        </button>
+        </a>
       </div>
     </div>
   );

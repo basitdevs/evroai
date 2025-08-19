@@ -3,16 +3,16 @@ import { GoArrowRight } from "react-icons/go";
 
 const aiGapClosed = [
   {
-    title: "AI.",
-    text: "The technology no one can afford to ignore-buy most struggle to implement securely, understand fully, or use effectively.",
+    title: "FRICTION",
+    text: "caused by unique beliefs and ways of  working.",
   },
   {
-    title: "GAP.",
-    text: "The Gap between technology, skills and people resources.",
+    title: "BLOCKS",
+    text: " causes misunderstandings and  avoidance.",
   },
   {
-    title: "CLOSED.",
-    text: "Real solutions. Real people. Real outcomes.",
+    title: "GROWTH",
+    text: "that slows growth and makes work hard.",
   },
 ];
 
@@ -49,18 +49,6 @@ export const Problem = React.forwardRef<HTMLElement, { id: string }>(({ id }, re
     >
       <main className='w-full mx-auto'>
         <div className='py-20 md:py-24'>
-          {/* Section 1: AI. GAP. CLOSED. */}
-          <section className='max-w-[1550px] px-8 sm:px-6  mx-auto flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-20 pb-24 lg:pb-32'>
-            {aiGapClosed.map((item, i) => (
-              <div className='column' key={i}>
-                <h3 className='font-heading text-[36px] lg:text-[56px] font-simebold uppercase'>
-                  {item.title}
-                </h3>
-                <p className='text-[18px] text-white leading-relaxed max-w-md'>{item.text}</p>
-              </div>
-            ))}
-          </section>
-
           {/* Section 2: REVOLUTIONIZING */}
           <section className='pb-24 lg:pb-32 max-w-[1550px] px-8 sm:px-6 mx-auto'>
             <h1 className='font-heading text-[44px] lg:text-[72px] font-simebold uppercase leading-[1] tracking-normal mb-10 max-w-[750px]'>
@@ -79,50 +67,55 @@ export const Problem = React.forwardRef<HTMLElement, { id: string }>(({ id }, re
             </div>
           </section>
 
-          {/* Section 3: INTRODUCING HERO */}
-          <section id='product-section' className='relative'>
-            <div className='md:hidden max-h-[357px] h-auto z-40 w-full flex justify-end'>
-              <img
-                src='https://www.dayos.com/_vercel/image?url=https:%2F%2Fa.storyblok.com%2Ff%2F314917%2F2782x2124%2F4b6cc5367e%2Flatest.png%2Fm%2Ffilters:format(webp):quality(85)&w=1536&q=85'
-                alt='Hero platform dashboard displayed on a laptop.'
-                className='max-h-[357px] h-auto z-40'
-              />
-            </div>
-            <div className='hero-text-content max-w-[1550px] px-8 sm:px-6 mx-auto pt-10 md:pt-0 z-50'>
-              <h2 className='font-heading text-[44px] md:text-[72px] font-simebold uppercase leading-[1.05] tracking-tight mb-9 max-w-4xl'>
-                Introducing
-                <br />
-                Evro
-              </h2>
-              <div className='space-y-4 max-w-[555px]'>
-                <p className='text-[24px] text-white leading-[1.2]'>
-                  Evro turns every team member into a better collaborator—automatically, every day.
-                </p>
-                <p className='text-[18px] text-white leading-[1.4] sm:leading-[1.2]'>
-                  Whereas generic AI copilots help to do routine or repetitive tasks, Evro is
-                  designed to help staff understand how to collaborate at their best, resolve
-                  communication barriers and get work done faster and more enjoyably.
-                </p>
+          {/* Section 1: AI. GAP. CLOSED. */}
+          <section className='max-w-[1550px] px-8 sm:px-6  mx-auto flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-20 pb-24 lg:pb-32'>
+            {aiGapClosed.map((item, i) => (
+              <div className='column' key={i}>
+                <h3 className='font-heading text-[36px] lg:text-[56px] font-simebold uppercase'>
+                  {item.title}
+                </h3>
+                <p className='text-[18px] text-white leading-relaxed max-w-md'>{item.text}</p>
               </div>
-              {/* <a
-                href='#book-intro'
-                className='inline-block bg-white text-black font-bold text-base py-3 px-6 rounded-md mt-8 transition-all duration-300 hover:bg-neutral-200 hover:scale-105'
-              >
-                Book an intro
-              </a> */}
+            ))}
+          </section>
+
+          <section id='product-section' className='relative pt-[100px] bg-black'>
+            <div className='max-w-[1550px] mx-auto px-6 md:px-8 flex flex-col lg:flex-row items-center lg:items-start gap-10'>
+              {/* Text Content */}
+              <div className='flex-1 text-left z-20'>
+                <h2 className='font-heading text-[44px] md:text-[72px] font-bold uppercase leading-[1.05] tracking-tight mb-9 text-white'>
+                  Introducing <br /> Evro
+                </h2>
+                <div className='space-y-6 max-w-[555px]'>
+                  <p className='text-[22px] md:text-[24px] text-white leading-[1.3] font-medium'>
+                    Evro turns every team member into a better collaborator—automatically, every
+                    day.
+                  </p>
+                  <p className='text-[16px] md:text-[18px] text-white leading-[1.5]'>
+                    Whereas generic AI copilots help with routine or repetitive tasks, Evro is
+                    designed to help staff understand how to collaborate at their best, resolve
+                    communication barriers, and get work done faster and more enjoyably.
+                  </p>
+                </div>
+              </div>
+
+              {/* Image Content */}
+              <div className='flex-1 flex justify-center relative z-10'>
+                {/* Mobile / Tablet */}
+                <img
+                  src='/imgs/introMacbookEvroDash.png'
+                  alt='Evro platform dashboard displayed on a laptop.'
+                  className='block lg:hidden w-full max-w-[500px] h-auto object-contain mt-8'
+                />
+
+                {/* Desktop */}
+                <img
+                  src='/imgs/introMacbookEvroDash.png'
+                  alt='Evro platform dashboard displayed on a laptop.'
+                  className='hidden lg:block w-full max-w-[800px] h-auto object-contain'
+                />
+              </div>
             </div>
-            <div className='lg:hidden max-h-[557px] h-auto z-40 w-full flex justify-end'>
-              <img
-                src='https://www.dayos.com/_vercel/image?url=https:%2F%2Fa.storyblok.com%2Ff%2F314917%2F2782x2124%2F4b6cc5367e%2Flatest.png%2Fm%2Ffilters:format(webp):quality(85)&w=1536&q=85'
-                alt='Hero platform dashboard displayed on a laptop.'
-                className='max-h-[557px] h-auto z-40 mt-14'
-              />
-            </div>
-            <img
-              src='https://www.dayos.com/_vercel/image?url=https:%2F%2Fa.storyblok.com%2Ff%2F314917%2F2782x2124%2F4b6cc5367e%2Flatest.png%2Fm%2Ffilters:format(webp):quality(85)&w=1536&q=85'
-              alt='Hero platform dashboard displayed on a laptop.'
-              className='hidden lg:block absolute top-0 right-0 w-[717px] h-auto z-10'
-            />
 
             {/* Super charge section how it works */}
             <div className='mt-16 md:mt-48 max-w-[1550px] px-8 sm:px-6 mx-auto'>
