@@ -12,17 +12,12 @@ const desktopNavLinks = [
 
 const DayosLogo = ({ isDark }) => (
   <div className='flex-shrink-0'>
-    <a
-      href='#'
-      className={`text-[32px] font-bold tracking-[0.5px] transition-all duration-300 ${
-        isDark ? "text-white" : "text-black"
-      }`}
-    >
-      <img
-        src='/logo.png'
-        alt='EvroAI Logo'
-        className='h-[30px] w-auto transition-all duration-300 '
-      />
+    <a href='#' className={` h-full`}>
+      {isDark ? (
+        <img src='/logo.png' alt='EvroAI Logo' className={`h-[24px] md:h-[30px]`} />
+      ) : (
+        <img src='/logo_light.png' alt='EvroAI Logo' className={`h-[24px] md:h-[30px]`} />
+      )}
     </a>
   </div>
 );
@@ -102,7 +97,7 @@ export const Header = React.memo(({ backgroundColor }) => {
             <a
               href='https://forms.fillout.com/t/5L468P5Xptus'
               // target='_blank'
-              className={`${getStartedClasses} text-base px-4 py-2 ${
+              className={`${getStartedClasses} text-base px-3 md:px-4 py-1.5 md:py-2 ${
                 isDarkBg ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >
@@ -132,7 +127,9 @@ export const Header = React.memo(({ backgroundColor }) => {
             <a
               href='https://forms.fillout.com/t/5L468P5Xptus'
               // target='_blank'
-              className={`${getStartedClasses} text-[12px] text-black  px-5 py-2.5`}
+              className={`${getStartedClasses} text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 ${
+                isDarkBg || isMenuOpen ? "bg-[#00C4CC] text-black" : "bg-black text-white"
+              }`}
             >
               Get Started
             </a>
@@ -147,6 +144,7 @@ export const Header = React.memo(({ backgroundColor }) => {
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : "_self"}
                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    onClick={() => setIsMenuOpen(false)}
                     className='flex justify-between items-center w-full mb-3'
                   >
                     <h3 className='text-xl font-bold text-neutral-300'>{item.name}</h3>

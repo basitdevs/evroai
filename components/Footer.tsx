@@ -76,7 +76,7 @@ export const Footer = React.memo(() => {
           </div>
 
           <div className='w-full lg:w-3/4 flex flex-wrap justify-start lg:justify-between lg:pl-32 mt-8 lg:mt-0'>
-            <div className='w-1/2 md:w-1/4 mb-8 lg:mb-0'>
+            <div className='w-1/2 md:w-1/4 mb-4 md:mb-8 lg:mb-0'>
               <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>
                 Privacy and Terms
               </h3>
@@ -95,10 +95,30 @@ export const Footer = React.memo(() => {
             </div>
 
             {/* Column 2: Business Functions (using footerLinks[1] from your provided data) */}
-            <div className='w-1/2 md:w-1/4 mb-8 lg:mb-0'>
+            <div className='w-1/2 md:w-1/4 mb-4 md:mb-8 lg:mb-0'>
               <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>Newsletter</h3>
               <ul className='space-y-1'>
                 {footerLinks[1]?.links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Original span from provided code, hidden on small screens to avoid duplicate content display on desktop */}
+            {/* <span className='hidden lg:block w-[130px] text-base text-neutral-300 hover:text-white leading-[1.5] mt-8 lg:mt-0'>
+              Evro AI Pty Ltd © 2025 | All rights reserve
+            </span> */}
+            <div className='w-1/2 md:w-1/4 mb-4 md:mb-8 lg:mb-0'>
+              <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>About</h3>
+              <ul className='space-y-1'>
+                {footerLinks[2]?.links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -120,26 +140,6 @@ export const Footer = React.memo(() => {
                   hello@evro.ai
                 </a>
               </p>
-            </div>
-
-            {/* Original span from provided code, hidden on small screens to avoid duplicate content display on desktop */}
-            {/* <span className='hidden lg:block w-[130px] text-base text-neutral-300 hover:text-white leading-[1.5] mt-8 lg:mt-0'>
-              Evro AI Pty Ltd © 2025 | All rights reserve
-            </span> */}
-            <div className='w-1/2 md:w-1/4 mb-8 lg:mb-0'>
-              <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>About</h3>
-              <ul className='space-y-1'>
-                {footerLinks[2]?.links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
