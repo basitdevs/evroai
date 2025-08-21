@@ -35,35 +35,6 @@ body {
   font-family: "SuisseIntlCond-Bold";
 }
 
-/* --- Section Styling --- */
-#hero-section {
-  background-color: #f3f4f6;
-  color: #000;
-}
-
-#problem-section,
-#features-section,
-#backed-by-section,
-#faq-section,
-#contact-section {
-  background-color: #000;
-  color: #fff;
-}
-
-#process-section,
-#use-cases-section,
-#cta-section {
-  background-color: #fff;
-  color: #000;
-}
-
-#playground-section,
-#social-proof-section,
-#newsletter-section {
-  background-color: #fff;
-  color: #000;
-}
-
 /* --- Content Animation --- */
 .anim-reveal {
   opacity: 0;

@@ -1,42 +1,19 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
+import Business from "./Business";
 
 const aiGapClosed = [
   {
     title: "FRICTION",
-    text: "caused by unique beliefs and ways of  working.",
+    text: "caused by unique beliefs and ways of working.",
   },
   {
     title: "BLOCKS",
-    text: " causes misunderstandings and  avoidance.",
+    text: "cause misunderstandings and avoidance.",
   },
   {
     title: "GROWTH",
-    text: "that slows growth and makes work hard.",
-  },
-];
-
-const revolutionizingText = [
-  "You don’t need theoretical AI.",
-  "You don’t need legacy apps disguised as AI.",
-  'You need "real" AI that works now—AI that delivers real value to your enterprise today, no matter where you are on your digital transformation journey.',
-];
-
-const heroFeatures = [
-  {
-    title: "No calls to HR",
-    text: "AI provides support for complex and high stakes conversations.",
-    img: "/imgs/orange-sphere.png",
-  },
-  {
-    title: "No boring L&D",
-    text: "Skills are taught in the flow of work via Teams and Slack using AI coaching. ",
-    img: "/imgs/aqua-cube.png",
-  },
-  {
-    title: "No waiting",
-    text: "No waiting for performance reviews. AI provides instant objective data based on the actual situation.",
-    img: "/imgs/purple-hemisphere.png",
+    text: "slows down and work becomes hard.",
   },
 ];
 
@@ -45,20 +22,28 @@ export const Problem = React.forwardRef<HTMLElement, { id: string }>(({ id }, re
     <div
       ref={ref}
       id={id}
-      className='w-full bg-[#0d0d0d] rounded-t-[40px] text-white overflow-hidden'
+      className='w-full bg-[#0d0d0d] rounded-t-[50px] text-white overflow-hidden'
     >
       <main className='w-full mx-auto'>
         <div className='py-20 md:py-24'>
+          <Business />
+
           {/* Section 2: REVOLUTIONIZING */}
           <section className='pb-24 lg:pb-32 max-w-[1550px] px-8 sm:px-6 mx-auto'>
-            <h1 className='font-heading text-[44px] lg:text-[72px] font-simebold uppercase leading-[1] tracking-normal mb-10 max-w-[750px]'>
+            <h1
+              data-aos='fade-right'
+              data-aos-delay='20'
+              className='font-heading text-[44px] lg:text-[72px] font-simebold uppercase leading-[1] tracking-normal mb-10 max-w-[1000px]'
+            >
               Traditional HR Tools Can’t Keep Up with Real-World Team Dynamics
             </h1>
-            <div className='max-w-[455px]'>
+            <div className='max-w-[755px]'>
               {/* {revolutionizingText.map((txt, i) => ( */}
               <p
                 // key={i}
-                className={`text-[18px] text-white leading-[1.4] mt-7 `} // ${i === 2 ? "mt-7" : ""}
+                data-aos='fade-up-right'
+                data-aos-delay='200'
+                className={`text-[18px] font-medium md:text-[24px] text-white/70 leading-[1.4] mt-7 `} // ${i === 2 ? "mt-7" : ""}
               >
                 Performance reviews are slow. Surveys are skewed. Traditional L&D doesn’t drive real
                 change. Meanwhile, collaboration problems silently drain productivity and burn out
@@ -75,82 +60,6 @@ export const Problem = React.forwardRef<HTMLElement, { id: string }>(({ id }, re
                   {item.title}
                 </h3>
                 <p className='text-[18px] text-white leading-relaxed max-w-md'>{item.text}</p>
-              </div>
-            ))}
-          </section>
-
-          <section id='product-section' className='relative pt-[100px] bg-black'>
-            <div className='max-w-[1550px] mx-auto px-6 md:px-8 flex flex-col lg:flex-row items-center lg:items-start gap-10'>
-              {/* Text Content */}
-              <div className='flex-1 text-left z-20'>
-                <h2 className='font-heading text-[44px] md:text-[72px] font-bold uppercase leading-[1.05] tracking-tight mb-9 text-white'>
-                  Introducing <br /> Evro
-                </h2>
-                <div className='space-y-6 max-w-[555px]'>
-                  <p className='text-[22px] md:text-[24px] text-white leading-[1.3] font-medium'>
-                    Evro turns every team member into a better collaborator—automatically, every
-                    day.
-                  </p>
-                  <p className='text-[16px] md:text-[18px] text-white leading-[1.5]'>
-                    Whereas generic AI copilots help with routine or repetitive tasks, Evro is
-                    designed to help staff understand how to collaborate at their best, resolve
-                    communication barriers, and get work done faster and more enjoyably.
-                  </p>
-                </div>
-              </div>
-
-              {/* Image Content */}
-              <div className='flex-1 flex justify-center relative z-10'>
-                {/* Mobile / Tablet */}
-                <img
-                  src='/imgs/introMacbookEvroDash.png'
-                  alt='Evro platform dashboard displayed on a laptop.'
-                  className='block lg:hidden w-full max-w-[500px] h-auto object-contain mt-8'
-                />
-
-                {/* Desktop */}
-                <img
-                  src='/imgs/introMacbookEvroDash.png'
-                  alt='Evro platform dashboard displayed on a laptop.'
-                  className='hidden lg:block w-full max-w-[800px] h-auto object-contain'
-                />
-              </div>
-            </div>
-
-            {/* Super charge section how it works */}
-            <div className='mt-16 md:mt-48 max-w-[1550px] px-8 sm:px-6 mx-auto'>
-              <div className='max-w-[515px]'>
-                <h2 className='text-[28px] md:text-[46px] font-bold text-white leading-tight mb-6'>
-                  Eliminate team friction. <br /> Unlock collaboration.
-                </h2>
-                <p className='text-lg md:text-[18px] max-w-[555px] text-white leading-relaxed mb-8'>
-                  Evro gives every manager and employee an AI assistant that helps them to expertly
-                  understand and fix team dynamics. Plus real time performance data for leadership
-                  teams to unlock faster growth and better work.
-                </p>
-                {/* <a
-                  href='/platform'
-                  className='inline-flex items-center gap-2 bg-[#4f4f4f] text-white font-bold text-base py-3 px-6 rounded-lg transition-all duration-300 hover:bg-neutral-200 hover:scale-105'
-                >
-                  More details <GoArrowRight size={20} />
-                </a> */}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 4: HERO FEATURES */}
-          <section className='max-w-[1550px] px-8 sm:px-6 mt-16 mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10'>
-            {heroFeatures.map((feat, i) => (
-              <div className='feature-card' key={i}>
-                <div className='w-[200px] h-[200px] my-3 flex justify-center items-center'>
-                  <img src={feat.img} alt='' className='min-w-[317px] min-h-[317px] mb-10' />
-                </div>
-                <h4 className='font-heading text-3xl md:text-[48px] font-simebold uppercase mb-4'>
-                  {feat.title}
-                </h4>
-                <p className='text-[20px] text-white leading-[1.4] max-w-[300px] md:max-w-max'>
-                  {feat.text}
-                </p>
               </div>
             ))}
           </section>

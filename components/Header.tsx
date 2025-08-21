@@ -72,7 +72,7 @@ export const Header = React.memo(({ backgroundColor }) => {
             {/* Desktop Navigation */}
             <nav
               className={`hidden lg:flex items-center justify-center py-2 px-6 rounded-full ${
-                isDarkBg ? "bg-neutral-800/50" : "bg-white/70 backdrop-blur-sm"
+                isDarkBg ? "bg-[#1a1a1a]" : "bg-white backdrop-blur-sm"
               }`}
             >
               <div className='flex items-center gap-7'>
@@ -96,12 +96,14 @@ export const Header = React.memo(({ backgroundColor }) => {
 
             <a
               href='https://forms.fillout.com/t/5L468P5Xptus'
-              // target='_blank'
-              className={`${getStartedClasses} text-base px-3 md:px-4 py-1.5 md:py-2 ${
-                isDarkBg ? "bg-[#00C4CC] text-black" : "bg-black text-white"
+              target='_blank'
+              className={`${getStartedClasses} text-base px-3 md:px-4 py-1.5 md:py-2 transition-all duration-300 ease-in-out ${
+                isDarkBg
+                  ? "bg-[#00C4CC] text-black"
+                  : "bg-black hover:bg-[#00C4CC] hover:text-black text-white"
               }`}
             >
-              Get Started
+              Get Early Access
             </a>
           </div>
         </div>
@@ -126,12 +128,12 @@ export const Header = React.memo(({ backgroundColor }) => {
             <DayosLogo isDark={true} />
             <a
               href='https://forms.fillout.com/t/5L468P5Xptus'
-              // target='_blank'
-              className={`${getStartedClasses} text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 ${
+              target='_blank'
+              className={`${getStartedClasses} text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out ${
                 isDarkBg || isMenuOpen ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >
-              Get Started
+              Get Early Access
             </a>
           </div>
 

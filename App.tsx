@@ -1,72 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { Problem } from "./components/Problem";
-import { SocialProof } from "./components/SocialProof";
-import { FAQ } from "./components/FAQ";
-import { Footer } from "./components/Footer";
-import SkillsCards from "./components/SkillsCards";
-import Business from "./components/Business";
-import { About } from "./components/About";
+import React, { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 import Privacy from "./pages/Privacy";
 import Home from "./pages/Home";
 import Terms from "./pages/Terms";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
-  const [headerBgColor, setHeaderBgColor] = useState("rgb(243, 244, 246)");
-
-  const sectionRefs = [
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-    useRef<HTMLElement>(null),
-  ];
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            const sectionEl = entry.target as HTMLElement;
-            const bgColor = window.getComputedStyle(sectionEl).backgroundColor;
-            setHeaderBgColor(bgColor);
-          } else {
-            entry.target.classList.remove("is-visible");
-          }
-        });
-      },
-      {
-        root: null,
-        threshold: 0.25,
-      }
-    );
-
-    const sections = sectionRefs
-      .map((ref) => ref.current)
-      .filter((el): el is HTMLElement => el !== null);
-
-    sections.forEach((section) => {
-      observer.observe(section);
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Animate only once
     });
-
-    return () => {
-      sections.forEach((section) => {
-        if (section) {
-          observer.unobserve(section);
-        }
-      });
-    };
   }, []);
 
   return (

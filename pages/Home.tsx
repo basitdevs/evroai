@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer";
 import SkillsCards from "../components/SkillsCards";
 import Business from "../components/Business";
 import { About } from "../components/About";
+import { Introduction } from "@/components/Introduction";
 
 export default function Home() {
   const [headerBgColor, setHeaderBgColor] = useState("rgb(243, 244, 246)");
@@ -65,16 +66,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="antialiased">
+    <div className='antialiased overflow-hidden'>
       <Header backgroundColor={headerBgColor} />
-      <main className="bg-[#E9E9E9]">
-        <Hero id="hero-section" ref={sectionRefs[0]} />
-        <Problem id="problem-section" ref={sectionRefs[1]} />
-        <div className="bg-black z-[55]">
-          <SocialProof id="social-proof-section" ref={sectionRefs[2]} />
+      <main className='bg-[#f0f0f0]'>
+        <Hero id='hero-section' ref={sectionRefs[0]} />
+        <Problem id='problem-section' ref={sectionRefs[1]} />
+        <div className='bg-black z-[55]'>
+          <Introduction id='introduction-section' ref={sectionRefs[2]} />
         </div>
-        <SkillsCards />
-        <Business />
+        <SocialProof id='social-proof-section' ref={sectionRefs[3]} />
+
+        <SkillsCards id='why-evro-section' ref={sectionRefs[4]} />
         <FAQ />
         <About />
       </main>

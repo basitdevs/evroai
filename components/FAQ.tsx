@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
 const faqData = [
   {
@@ -16,11 +16,11 @@ const faqData = [
   },
   {
     q: "Can Evro replace my learning management system?",
-    a: "Yes, Evro can replace some features of an LMS such as TBC.",
+    a: "Yes, Evro can replace some features of an LMS such as content libraries, self-authoring and course creation. You can also upload documents from recent leadership trainings and Evro will create personalised content and coaching for each employee.",
   },
   {
     q: "Can Evro replace my employee experience platform?",
-    a: "Yes, Evro can replace some features of an EXP such as TBC.",
+    a: "Yes, Evro can replace some features of an EXP such as employee surveys, action and learning plans, 1-on-1 support, career planning and performance reviews. Evro additionally provides enhancements to these by being real-time and objective using organisational context rather than lagging, self reported or static.",
   },
   {
     q: "Is Evro compliant with the WHS Psychosocial Hazard legislation?",
@@ -63,10 +63,19 @@ const FaqItem = ({ question, answer }) => {
 
 export const FAQ = () => {
   return (
-    <div className='bg-white font-heading p-5 px-8 sm:px-6 py-20 md:py-28 '>
+    <div className='font-heading p-5 px-8 sm:px-6 py-20 md:py-28 '>
       <div className='max-w-[800px] mx-auto'>
-        <h1 className='text-[44px] md:text-[72px] leading-[1]'>FAQ</h1>
-        <div className='mt-[18px] md:mt-[22px]'>
+        <h1
+          className='text-[44px] md:text-[72px] leading-[1]'
+          data-aos='fade-right'
+          data-aos-delay='200'
+        >
+          FAQ
+        </h1>
+        <div className='mt-[18px] md:mt-[22px]' 
+         data-aos='fade-up'
+            data-aos-delay='500'
+        >
           {faqData.map((item, index) => (
             <div key={index}>
               <FaqItem question={item.q} answer={item.a} />

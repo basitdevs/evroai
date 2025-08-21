@@ -18,7 +18,7 @@ const DayosLogo = () => (
 const footerLinks = [
   {
     links: [
-      // { label: "Trust Centre", href: "/trust-centre" },
+      { label: "Trust Centre", href: "https://app.safebase.io/", target: "_blank" },
       { label: "Privacy", href: "/privacy-statement" },
       { label: "Terms", href: "/terms-of-service" },
     ],
@@ -28,18 +28,13 @@ const footerLinks = [
       {
         label: "Subscribe to our newsletter",
         href: "https://preview.mailerlite.io/forms/1705936/163148231391315767/share",
+        target: "_blank",
       },
-
-      // { label: "Subscribe here →", href: "/newsletter" },
-      // { label: "Newsletter", href: "/newsletter" },
     ],
   },
   {
     links: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/evro-ai/" },
-
-      // { label: "Subscribe here →", href: "/newsletter" },
-      // { label: "Newsletter", href: "/newsletter" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/evro-ai/", target: "_blank" },
     ],
   },
 ];
@@ -47,7 +42,11 @@ const footerLinks = [
 export const Footer = React.memo(() => {
   return (
     <footer className='bg-black text-white '>
-      <div className='mx-auto px-8 sm:px-6 lg:px-10 pt-8 md:pt-20 pb-10 max-w-[1550px]'>
+      <div
+        data-aos='fade-in'
+        data-aos-delay='20'
+        className='mx-auto px-8 sm:px-6 lg:px-10 pt-8 md:pt-20 pb-10 max-w-[1550px]'
+      >
         <div className='flex flex-col lg:flex-row justify-between'>
           <div className='w-full lg:w-1/4'>
             <div className='flex justify-between '>
@@ -85,6 +84,7 @@ export const Footer = React.memo(() => {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      target={link.target}
                       className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
                     >
                       {link.label}
@@ -102,6 +102,7 @@ export const Footer = React.memo(() => {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      target={link.target}
                       className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
                     >
                       {link.label}
@@ -111,10 +112,6 @@ export const Footer = React.memo(() => {
               </ul>
             </div>
 
-            {/* Original span from provided code, hidden on small screens to avoid duplicate content display on desktop */}
-            {/* <span className='hidden lg:block w-[130px] text-base text-neutral-300 hover:text-white leading-[1.5] mt-8 lg:mt-0'>
-              Evro AI Pty Ltd © 2025 | All rights reserve
-            </span> */}
             <div className='w-1/2 md:w-1/4 mb-4 md:mb-8 lg:mb-0'>
               <h3 className='font-bold text-white text-[16px] md:text-[18px] mb-3'>About</h3>
               <ul className='space-y-1'>
@@ -122,6 +119,7 @@ export const Footer = React.memo(() => {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      target={link.target}
                       className='text-[14px] md:text-[16px] text-neutral-300 hover:text-white leading-[1.0]'
                     >
                       {link.label}
@@ -153,51 +151,12 @@ export const Footer = React.memo(() => {
               Back to top
             </a>
             {/* Copyright text for Desktop */}
-            <p className='text-[12px]'>Dayos © 2025 | All rights reserved {/* Matches image */}</p>
+            <p className='text-[12px]'>Evro AI © 2025 | All rights reserved</p>
           </div>
 
-          {/* <div className='w-full sm:w-auto flex flex-row gap-12 md:gap-16 order-3 lg:order-2 justify-between'>
-            <address className='not-italic leading-relaxed'>
-              400 Concar Drive
-              <br />
-              San Mateo, CA
-              <br />
-              94402, USA
-            </address>
-            <address className='not-italic leading-relaxed'>
-              15 Beach Road,
-              <br />
-              2nd Floor
-              <br />
-              Singapore, 189677
-            </address>
-          </div> */}
-
           <p className='block lg:hidden text-[12px] order-4'>
-            All rights reserved with Evro © 2025 | All rights reserved
+            Evro AI © 2025 | All rights reserved
           </p>
-
-          {/* <div className='flex flex-col items-start lg:items-end gap-5 order-5 lg:order-3'>
-            <div className='flex space-x-4'>
-              <a href='#' aria-label='LinkedIn'>
-                <FiLinkedin size={20} />
-              </a>
-              <a href='#' aria-label='X'>
-                <FiTwitter size={20} />
-              </a>
-              <a href='#' aria-label='YouTube'>
-                <FiYoutube size={20} />
-              </a>
-            </div>
-            <div className='text-left lg:text-right space-y-2'>
-              <a href='#' className='block'>
-                Online Terms of Service
-              </a>
-              <a href='#' className='block'>
-                Privacy Statement
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
     </footer>
