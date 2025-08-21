@@ -4,15 +4,15 @@ import { MdOutlineMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 const desktopNavLinks = [
-  { name: "Product", href: "#product-section" },
-  { name: "Use Cases ", href: "#social-proof-section" },
-  { name: "Why Evro", href: "#why-evro-section" },
+  { name: "Product", href: "/#product-section" },
+  { name: "Use Cases ", href: "/#social-proof-section" },
+  { name: "Why Evro", href: "/#why-evro-section" },
   { name: "About Us", href: "https://www.linkedin.com/company/evro-ai/" },
 ];
 
 const DayosLogo = ({ isDark }) => (
   <div className='flex-shrink-0'>
-    <a href='#' className={` h-full`}>
+    <a href='/' className={` h-full`}>
       {isDark ? (
         <img src='/logo.png' alt='EvroAI Logo' className={`h-[24px] md:h-[30px]`} />
       ) : (

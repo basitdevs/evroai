@@ -1,20 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { Problem } from "./components/Problem";
-import { SocialProof } from "./components/SocialProof";
-import { FAQ } from "./components/FAQ";
-import { Footer } from "./components/Footer";
-import SkillsCards from "./components/SkillsCards";
-import Business from "./components/Business";
-import { About } from "./components/About";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
+import { Problem } from "../components/Problem";
+import { SocialProof } from "../components/SocialProof";
+import { FAQ } from "../components/FAQ";
+import { Footer } from "../components/Footer";
+import SkillsCards from "../components/SkillsCards";
+import Business from "../components/Business";
+import { About } from "../components/About";
 
-import { Routes, Route } from "react-router-dom";
-import Privacy from "./pages/Privacy";
-import Home from "./pages/Home";
-import Terms from "./pages/Terms";
-
-function App() {
+export default function Home() {
   const [headerBgColor, setHeaderBgColor] = useState("rgb(243, 244, 246)");
 
   const sectionRefs = [
@@ -70,12 +65,20 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/privacy-statement' element={<Privacy />} />
-      <Route path='/terms-of-service' element={<Terms />} />
-    </Routes>
+    <div className="antialiased">
+      <Header backgroundColor={headerBgColor} />
+      <main className="bg-[#E9E9E9]">
+        <Hero id="hero-section" ref={sectionRefs[0]} />
+        <Problem id="problem-section" ref={sectionRefs[1]} />
+        <div className="bg-black z-[55]">
+          <SocialProof id="social-proof-section" ref={sectionRefs[2]} />
+        </div>
+        <SkillsCards />
+        <Business />
+        <FAQ />
+        <About />
+      </main>
+      <Footer />
+    </div>
   );
 }
-
-export default App;
