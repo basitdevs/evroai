@@ -35,6 +35,17 @@ body {
   font-family: "SuisseIntlCond-Bold";
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+
 /* --- Content Animation --- */
 .anim-reveal {
   opacity: 0;
