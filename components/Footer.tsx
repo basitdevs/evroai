@@ -1,14 +1,14 @@
 import React from "react";
-import { FiArrowUp, FiLinkedin, FiTwitter, FiYoutube } from "react-icons/fi";
+import { FiArrowUp } from "react-icons/fi";
 
 // The DayosLogo component provided by the user, renders "Evro" text
 const DayosLogo = () => (
   <div className='flex-shrink-0'>
     <a href='#' className={`text-[40px] font-bold tracking-[0.5px] transition-all duration-300`}>
       <img
-        src='/logo.png'
+        src='/logo_light.png'
         alt='EvroAI Logo'
-        className='h-[30px] w-auto transition-all duration-300 '
+        className='h-[40px] md:h-[50px] w-auto transition-all duration-300 '
       />
     </a>
   </div>

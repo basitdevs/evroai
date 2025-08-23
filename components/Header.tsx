@@ -14,9 +14,9 @@ const DayosLogo = ({ isDark }) => (
   <div className='flex-shrink-0'>
     <a href='/' className={` h-full`}>
       {isDark ? (
-        <img src='/logo.png' alt='EvroAI Logo' className={`h-[24px] md:h-[30px]`} />
+        <img src='/logo_light.png' alt='EvroAI Logo' className={`h-[32px] md:h-[40px]`} />
       ) : (
-        <img src='/logo_light.png' alt='EvroAI Logo' className={`h-[24px] md:h-[30px]`} />
+        <img src='/logo_dark.png' alt='EvroAI Logo' className={`h-[32px] md:h-[40px]`} />
       )}
     </a>
   </div>
@@ -72,7 +72,7 @@ export const Header = React.memo(({ backgroundColor }) => {
             {/* Desktop Navigation */}
             <nav
               className={`hidden lg:flex items-center justify-center py-2 px-6 rounded-full ${
-                isDarkBg ? "bg-[#1a1a1a]" : "bg-white backdrop-blur-sm"
+                isDarkBg ? "bg-[#3e3e3e]" : "bg-white backdrop-blur-sm"
               }`}
             >
               <div className='flex items-center gap-7'>
