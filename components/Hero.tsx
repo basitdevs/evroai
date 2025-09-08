@@ -13,16 +13,15 @@ export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
           data-aos-delay='20'
           className='text-[44px] md:text-[72px] lg:text-[82px] font-heading font-semibold uppercase text-black tracking-normal leading-[1]'
         >
-          AI FOR EVERY EMPLOYEE TO UNLOCK COLLABORATION.{" "}
+          AI For Every Employee To Unlock Performance.
         </h1>
         <p
           data-aos='fade-up-right'
           data-aos-delay='200'
           className='mt-4 md:mt-8 text-[18px] font-medium md:text-[24px] text-[#000] leading-[1.3] md:max-w-[80%]'
         >
-          Evro gives every employee an AI assistant to fix collaboration issues, prepare for
-          high-stakes conversations, build skills and get performance feedback. HR and Ops teams get
-          real-time proof that training drives results.
+          Get early access to Evro, the AI Performance Enablement Platform. Built by psychologists,
+          designed to elevate your confidence and performance. Join our closed beta today.
         </p>
 
         <div
@@ -31,11 +30,11 @@ export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
           className='flex justify-start items-center gap-4 mt-6'
         >
           <a
-            href='https://forms.fillout.com/t/1YmZve4Fqdus'
+            href='https://forms.fillout.com/t/nAxnDSwePjus'
             target='_blank'
             className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
           >
-            Get Early Access
+            Apply For Closed Beta
           </a>
         </div>
       </div>
@@ -45,7 +44,7 @@ export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
           data-aos='fade-left'
           data-aos-delay='200'
           className='w-full'
-          src='/imgs/introMacbookEvroDash.png'
+          src='/imgs/evro-middle-eastern-female-smiling-employee.webp'
           alt='Evro AI on MacBook'
         />
       </div>

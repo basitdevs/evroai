@@ -4,10 +4,12 @@ import { MdOutlineMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 const desktopNavLinks = [
-  { name: "Product", href: "/#product-section" },
-  { name: "Use Cases ", href: "/#social-proof-section" },
-  { name: "Why Evro", href: "/#why-evro-section" },
-  { name: "About Us", href: "https://www.linkedin.com/company/evro-ai/" },
+  { name: "Platform", href: "/platform" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Trust", href: "#trust" },
+  { name: "Resources", href: "/resources" },
+  { name: "Company", href: "/company" },
+  { name: "Pricing", href: "#pricing" },
 ];
 
 const DayosLogo = ({ isDark }) => (
@@ -95,7 +97,7 @@ export const Header = React.memo(({ backgroundColor }) => {
             </nav>
 
             <a
-              href='https://forms.fillout.com/t/5L468P5Xptus'
+              href='https://forms.fillout.com/t/nAxnDSwePjus'
               target='_blank'
               className={`${getStartedClasses} text-base px-3 md:px-4 py-1.5 md:py-2 transition-all duration-300 ease-in-out ${
                 isDarkBg
@@ -103,7 +105,7 @@ export const Header = React.memo(({ backgroundColor }) => {
                   : "bg-black hover:bg-[#00C4CC] hover:text-black text-white"
               }`}
             >
-              Get Early Access
+              Apply For Closed Beta
             </a>
           </div>
         </div>
@@ -127,13 +129,13 @@ export const Header = React.memo(({ backgroundColor }) => {
             </button>
             <DayosLogo isDark={true} />
             <a
-              href='https://forms.fillout.com/t/5L468P5Xptus'
+              href='https://forms.fillout.com/t/nAxnDSwePjus'
               target='_blank'
               className={`${getStartedClasses} text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out ${
                 isDarkBg || isMenuOpen ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >
-              Get Early Access
+              Apply For Closed Beta
             </a>
           </div>
 

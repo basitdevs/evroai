@@ -1,4 +1,5 @@
 import React from "react";
+import Solutions from "./Solutions";
 
 const heroFeatures = [
   {
@@ -23,29 +24,38 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
         <div className='flex flex-col lg:flex-row items-center lg:items-start gap-10'>
           {/* Text Content */}
           <div className='flex-1 text-left z-20'>
-            <h2
+            <h1
               data-aos='fade-right'
               data-aos-delay='20'
               className='font-heading text-[44px] md:text-[72px] font-bold uppercase leading-[1.05] tracking-tight mb-9 text-black'
             >
               Introducing <br /> Evro
-            </h2>
+            </h1>
             <div data-aos='fade-up-right' data-aos-delay='200' className='space-y-6 max-w-[555px]'>
-              <p className='text-[22px] md:text-[24px] text-black leading-[1.3] font-medium'>
-                Evro turns every team member into a better collaborator—automatically, every day.
-              </p>
-              <p className='text-[16px] md:text-[18px] text-black leading-[1.5]'>
+              <h2 className='text-[22px] md:text-[24px] text-black leading-[1.3] font-medium mb-[40px]'>
+                Imagine having a team of workplace experts on demand. Evro gives you AI assistants
+                to communicate like a pro, collaborate like everyone wants you in their team, fix
+                problems with ease so you can progress your career and enjoy your work.{" "}
+              </h2>
+              {/* <p className='text-[16px] md:text-[18px] text-black leading-[1.5]'>
                 Whereas generic AI copilots help with routine or repetitive tasks, Evro is designed
                 to help staff understand how to collaborate at their best, resolve communication
                 barriers, and get work done faster and more enjoyably.
-              </p>
+              </p> */}
+
+              <a
+                href='/product'
+                className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
+              >
+                Platform
+              </a>
             </div>
           </div>
 
           {/* Image Content */}
           <div className='flex-1 flex justify-center relative z-10'>
             <img
-              src='/imgs/EvroMobileHeroShot.png'
+              src='/imgs/introMacbookEvroDash.png'
               alt='Evro platform dashboard displayed on a laptop.'
               className='w-full max-h-[600px] h-auto object-contain'
               data-aos='flip-left'
@@ -95,6 +105,8 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
           ))}
         </div>
       </div>
+              <Solutions />
+      
     </div>
   );
 });

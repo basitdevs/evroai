@@ -3,36 +3,44 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const faqData = [
   {
-    q: "How private is Evro?",
-    a: "Evro manages data security through a SOC2-ready architecture where enterprise clients retain full data ownership. User interaction is encrypted, the platform is private by default, requiring explicit, granular user consent for any data sharing, and offers a future enterprise VPC deployment option to keep all sensitive data processing within the client's own cloud. This is enforced with a dual-LLM strategy that uses a private, self-hosted LLM inside the client's VPC for sensitive coaching analysis, while external LLMs are only used for non-sensitive tasks with all PII removed.",
+    q: "Who can apply for the beta?",
+    a: "Anyone leading or working in a team can apply. We’re especially looking for managers, HR leaders, and teams in growing organisations who want to shape the future of AI-powered culture and performance.",
   },
   {
-    q: "Can Evro be used within Teams or Slack?",
-    a: "Evro integrates with Microsoft Teams and Slack so employees can get support within the tools they already use. Plus we have a webapp for advanced features and dashboards.",
+    q: "Is my data private?",
+    a: "Yes. Your conversations with Evro are completely private and are not shared with your team leader or your organisation. Conversations with Evro are analysed and de-identified for reporting purposes but never identify you personally. Data is encrypted so that Evro AI employees cannot see your conversations. Evro never trains external models on your information. You can individually delete any or all of your conversations at any time.",
   },
   {
-    q: "Can't we just use Copilot or Gemini?",
-    a: "You could—but those tools lack behavioural insight. Evro is built with clinical expertise to understand the human factors AI can't.",
+    q: "What’s included in early access?",
+    a: "You’ll get hands-on access to the beta version of Evro, which is a limited version but contains more than half of the full version and includes our best features. You’ll also get support from the Evro AI team, and the option to request the features you want to see.",
   },
   {
-    q: "Can Evro replace my learning management system?",
-    a: "Yes, Evro can replace some features of an LMS such as content libraries, self-authoring and course creation. You can also upload documents from recent leadership trainings and Evro will create personalised content and coaching for each employee.",
+    q: "How much does it cost to join?",
+    a: "Beta access is free. In return, we ask for your feedback about the product via surveys and you can opt in to video interviews if you’re open to it.",
   },
   {
-    q: "Can Evro replace my employee experience platform?",
-    a: "Yes, Evro can replace some features of an EXP such as employee surveys, action and learning plans, 1-on-1 support, career planning and performance reviews. Evro additionally provides enhancements to these by being real-time and objective using organisational context rather than lagging, self reported or static.",
+    q: "What will I need to do as a beta tester?",
+    a: "Use Evro to get expert support with team dynamics, communication, career development, leadership and other areas. Share your experience, and give us feedback through short surveys and optional video calls if you are open to that. No heavy lift required.",
   },
   {
-    q: "Is Evro compliant with the WHS Psychosocial Hazard legislation?",
-    a: "Yes. Evro is designed to align with Safe Work Australia psychosocial hazard guidelines and helps organisations achieve compliance quickly and easily.",
+    q: "How long does the beta run? Will I get free access after the beta?",
+    a: "The beta will run for three months, with regular updates and improvements along the way. We will notify you towards the end of the beta about opportunities for continued free or discounted access.",
   },
   {
-    q: "How long before Evro provides return on investment and how much?",
-    a: "Up to A$800,000 per 100 employees annually—through reduced claims, turnover, and lost productivity.",
+    q: "Do I need special tools or setup?",
+    a: "No. Evro is a web app accessible via secure login or SSO. Future releases will also plug into tools you already use, like Slack and Teams if you choose to authorise that. Setup is quick and simple.",
   },
   {
-    q: "Who is behind Evro?",
-    a: "For more information about Evro, please see our <a  href='https://www.linkedin.com/company/evro-ai/' class='font-bold hover:no-underline underline'> LinkedIn page.</a>",
+    q: "What if I want Evro for my team or my organisation?",
+    a: "If you’re interested in applying for your team or org, then please get in touch with us. If selected, our founding team will work closely with you to run a secure pilot. You’ll have a direct line for help, feedback, and co-creation sessions.",
+  },
+  {
+    q: "What’s the benefit of joining early?",
+    a: "Access is free during the closed beta, which only runs for three months. There may also be early-adopter advantages like discounted pricing after launch.",
+  },
+  {
+    q: "What happens after the beta?",
+    a: "We will be in touch with you to outline options for continued use, which might include free or discounted access for early testers.",
   },
 ];
 
@@ -63,24 +71,30 @@ const FaqItem = ({ question, answer }) => {
 
 export const FAQ = () => {
   return (
-    <div className='font-heading p-5 px-8 sm:px-6 py-20 md:py-28 '>
+    <div className=' p-5 px-8 sm:px-6 py-20 md:py-28 '>
       <div className='max-w-[800px] mx-auto'>
         <h1
-          className='text-[44px] md:text-[72px] leading-[1]'
+          className='text-[44px] font-heading md:text-[72px] leading-[1]'
           data-aos='fade-right'
           data-aos-delay='200'
         >
           FAQ
         </h1>
-        <div className='mt-[18px] md:mt-[22px]' 
-         data-aos='fade-up'
-            data-aos-delay='500'
-        >
+        <div className='mt-[18px] md:mt-[22px]' data-aos='fade-up' data-aos-delay='500'>
           {faqData.map((item, index) => (
             <div key={index}>
               <FaqItem question={item.q} answer={item.a} />
             </div>
           ))}
+        </div>
+        <div data-aos='fade-up' data-aos-delay='400' className='flex mt-6'>
+          <a
+            href='https://forms.fillout.com/t/nAxnDSwePjus'
+            target='_blank'
+            className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
+          >
+            Apply For Closed Beta
+          </a>
         </div>
       </div>
     </div>

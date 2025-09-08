@@ -9,6 +9,9 @@ import SkillsCards from "../components/SkillsCards";
 import Business from "../components/Business";
 import { About } from "../components/About";
 import { Introduction } from "@/components/Introduction";
+import Solutions from "@/components/Solutions";
+import TrustSection from "@/components/TrustSection";
+import PricingSection from "@/components/PricingSection";
 
 export default function Home() {
   const [headerBgColor, setHeaderBgColor] = useState("rgb(243, 244, 246)");
@@ -74,9 +77,12 @@ export default function Home() {
         <div className='bg-black z-[55]'>
           <Introduction id='introduction-section' ref={sectionRefs[2]} />
         </div>
+        <TrustSection />
+
         <SocialProof id='social-proof-section' ref={sectionRefs[3]} />
 
         <SkillsCards id='why-evro-section' ref={sectionRefs[4]} />
+        <PricingSection />
         <FAQ />
         <About />
       </main>
