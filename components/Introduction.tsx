@@ -66,7 +66,7 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
       </section>
 
       {/* Bottom Section */}
-      <div className='max-w-[1550px] px-6 md:px-8 py-20 pb-0 md:pb-20 mx-auto'>
+      <div className='max-w-[1550px] px-6 md:px-8 pt-20 mx-auto'>
         {/* Heading + Paragraph */}
         <div className='max-w-[750px]' data-aos='fade-right' data-aos-duration='1000'>
           <h2
@@ -105,7 +105,6 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
           ))}
         </div>
       </div>
-              <Solutions />
       
     </div>
   );

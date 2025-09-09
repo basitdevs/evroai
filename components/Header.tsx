@@ -16,9 +16,9 @@ const DayosLogo = ({ isDark }) => (
   <div className='flex-shrink-0'>
     <a href='/' className={` h-full`}>
       {isDark ? (
-        <img src='/logo_light.png' alt='EvroAI Logo' className={`h-[32px] md:h-[40px]`} />
+        <img src='/logo_light.png' alt='EvroAI Logo' className={`h-[28px] md:h-[40px]`} />
       ) : (
-        <img src='/logo_dark.png' alt='EvroAI Logo' className={`h-[32px] md:h-[40px]`} />
+        <img src='/logo_dark.png' alt='EvroAI Logo' className={`h-[28px] md:h-[40px]`} />
       )}
     </a>
   </div>
@@ -57,7 +57,7 @@ export const Header = React.memo(({ backgroundColor }) => {
                 className={`p-2 -ml-2 rounded-md ${textClass}`}
                 aria-label='Open menu'
               >
-                <MdOutlineMenu size={32} />
+                <MdOutlineMenu size={28} />
               </button>
             </div>
 
@@ -99,7 +99,7 @@ export const Header = React.memo(({ backgroundColor }) => {
             <a
               href='https://forms.fillout.com/t/nAxnDSwePjus'
               target='_blank'
-              className={`${getStartedClasses} text-base px-3 md:px-4 py-1.5 md:py-2 transition-all duration-300 ease-in-out ${
+              className={`${getStartedClasses} text-[12px] md:text-base px-3 md:px-4 py-1.5 md:py-2 transition-all duration-300 ease-in-out ${
                 isDarkBg
                   ? "bg-[#00C4CC] text-black"
                   : "bg-black hover:bg-[#00C4CC] hover:text-black text-white"
@@ -125,13 +125,13 @@ export const Header = React.memo(({ backgroundColor }) => {
               aria-label='Close menu'
               className='-ml-2 p-2 text-white'
             >
-              <RxCross2 size={32} />
+              <RxCross2 size={28} />
             </button>
             <DayosLogo isDark={true} />
             <a
               href='https://forms.fillout.com/t/nAxnDSwePjus'
               target='_blank'
-              className={`${getStartedClasses} text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out ${
+              className={`${getStartedClasses} text-[12px] md:text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out ${
                 isDarkBg || isMenuOpen ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >

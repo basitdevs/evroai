@@ -3,11 +3,11 @@ import React from "react";
 export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
   <section
     ref={ref}
-    className='relative bg-[#E9E9E9] pt-28 md:pt-12 pb-10 md:pb-20 overflow-hidden'
+    className='relative bg-[#E9E9E9] pt-28 md:pt-12 overflow-hidden'
   >
-    <div className='mx-auto max-w-[1550px] flex md:flex-row flex-col items-center px-6 md:pt-20 pb-10 lg:pt-32 md:pb-16 h-full relative'>
+    <div className='mx-auto max-w-[1550px] flex md:flex-row flex-col items-center px-6 md:pt-20 lg:pt-32 h-full relative'>
       {/* Left Content */}
-      <div className='text-left relative z-10 mt-4 md:1/2'>
+      <div className='text-left relative z-10 mt-4 md:1/2  pb-10 md:pb-36'>
         <h1
           data-aos='fade-right'
           data-aos-delay='20'
@@ -43,8 +43,8 @@ export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
         <img
           data-aos='fade-left'
           data-aos-delay='200'
-          className='w-full'
-          src='/imgs/evro-middle-eastern-female-smiling-employee.webp'
+          className='w-full shrink-0'
+          src='/imgs/evro-maori-female-smiling-employee.webp'
           alt='Evro AI on MacBook'
         />
       </div>

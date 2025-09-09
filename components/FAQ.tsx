@@ -71,7 +71,7 @@ const FaqItem = ({ question, answer }) => {
 
 export const FAQ = () => {
   return (
-    <div className=' p-5 px-8 sm:px-6 py-20 md:py-28 '>
+    <div className=' p-5 px-8 sm:px-6 py-20 pb-10 md:pb-24 md:py-28 '>
       <div className='max-w-[800px] mx-auto'>
         <h1
           className='text-[44px] font-heading md:text-[72px] leading-[1]'

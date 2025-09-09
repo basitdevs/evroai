@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { FiUsers, FiAward, FiShield, FiArrowRight } from "react-icons/fi"; // Using react-icons for icons
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { FaPause, FaPlay } from "react-icons/fa";
+import { FiUsers, FiAward, FiShield } from "react-icons/fi"; // Using react-icons for icons
 
-// --- Component Data ---
-// All your content is managed here. You can easily add, remove, or edit solutions.
 const solutionsData = [
   {
     id: "teamMembers",
@@ -11,9 +14,9 @@ const solutionsData = [
     description:
       "Prepare for tough conversations, get accurate, private performance feedback and grow your career skills.",
     ctaText: "Solutions For Team Members",
-    ctaLink: "/solutions", // Replace with your actual link
+    ctaLink: "/solutions",
     visual: {
-      imageSrc: "/imgs/solutions/evro-middle-eastern-male-employee-smiling.webp", // IMPORTANT: Replace with your image path
+      imageSrc: "/imgs/solutions/evro-middle-eastern-male-employee-smiling.webp",
       altText: "A male employee smiling, representing a team member",
       card: {
         icon: <FiUsers size={20} />,
@@ -32,9 +35,9 @@ const solutionsData = [
     description:
       "Build psychological safety, reduce conflict, and unlock collaboration with Evro’s AI assistants.",
     ctaText: "Solutions For Team Leaders",
-    ctaLink: "/solutions", // Replace with your actual link
+    ctaLink: "/solutions",
     visual: {
-      imageSrc: "/imgs/solutions/evro-chinese-female-employee-smiling.webp", // IMPORTANT: Replace with your image path
+      imageSrc: "/imgs/solutions/evro-chinese-female-employee-smiling.webp",
       altText: "A female employee smiling, representing a team leader",
       card: {
         icon: <FiAward size={20} />,
@@ -53,9 +56,9 @@ const solutionsData = [
     description:
       "Automate psychosocial risk management, measure ROI on people programs, and build a high performance culture.",
     ctaText: "Solutions For People & Culture Teams",
-    ctaLink: "/solutions", // Replace with your actual link
+    ctaLink: "/solutions",
     visual: {
-      imageSrc: "/imgs/solutions/evro-pacificislander-female-employee-smiling.webp", // IMPORTANT: Replace with your image path
+      imageSrc: "/imgs/solutions/evro-pacificislander-female-employee-smiling.webp",
       altText: "A female employee smiling, representing People & Culture",
       card: {
         icon: <FiShield size={20} />,
@@ -69,118 +72,111 @@ const solutionsData = [
   },
 ];
 
-// --- The React Component ---
 const Solutions: React.FC = () => {
-  // State to track the currently hovered/active role
-  const [activeSolutionId, setActiveSolutionId] = useState<string>(solutionsData[1].id); // Default to the popular one
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [progressPct, setProgressPct] = useState(0);
+  const SLIDE_DELAY = 4000;
 
-  const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    // If the user is hovering, do nothing and don't start the timer.
-    if (isHovered) {
-      return;
-    }
-
-    // Set up an interval to change the solution every 5 seconds.
-    const intervalId = setInterval(() => {
-      setActiveSolutionId((prevId) => {
-        const currentIndex = solutionsData.findIndex((s) => s.id === prevId);
-        const nextIndex = (currentIndex + 1) % solutionsData.length; // Loop back to the start
-        return solutionsData[nextIndex].id;
-      });
-    }, 5000); // 5000 milliseconds = 5 seconds
-
-    // Cleanup function: this will clear the interval when the component
-    // unmounts or when the isHovered state changes, preventing memory leaks.
-    return () => clearInterval(intervalId);
-  }, [isHovered]); // This effect re-runs whenever the isHovered state changes.
-  // --- NEW CODE E
-
-  const activeSolution = solutionsData.find((s) => s.id === activeSolutionId) || solutionsData[0];
+  const handlePlayPause = () => {
+    if (!swiperInstance) return;
+    isPlaying ? swiperInstance.autoplay.stop() : swiperInstance.autoplay.start();
+    setIsPlaying(!isPlaying);
+  };
+  const goToSlide = (i: number) => swiperInstance?.slideToLoop(i) && setProgressPct(0);
 
   return (
-    <section className=' py-20 px-4 pb-0'>
-      <div className='max-w-[1550px] mx-auto'>
-        {/* Main Headings */}
-        <div className='text-center mb-16'>
-          <h1 className='text-[44px] font-heading lg:text-[72px] font-simebold uppercase leading-[1] tracking-normal mb-10 mx-auto max-w-[1000px]'>
-            AI that understands you, your team and your goals.
-          </h1>
-          <p className='text-[18px] font-medium max-w-[1000px] text-center mx-auto md:text-[24px] text-black/70 leading-[1.4] mt-7'>
-            While standard AI can help you think through a work problem, Evro knows the bigger
-            picture: your goals, your team’s working styles, and your organisation’s objectives.
-          </p>
-        </div>
-
-        {/* Interactive Solutions Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-          {/* Left Column: Visuals */}
-          <div
-            className='relative w-full h-[500px] rounded-2xl transition-colors duration-500 ease-in-out'
-            style={{ backgroundColor: activeSolution.accentColor }}
-          >
-            {solutionsData.map((solution) => (
-              <img
-                key={solution.id}
-                src={solution.visual.imageSrc}
-                alt={solution.visual.altText}
-                className={`absolute inset-0 w-full h-full object-contain object-center transition-opacity duration-500 ease-in-out ${
-                  activeSolutionId === solution.id ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            ))}
-
-            {/* Visual Card Overlay */}
-            {/* <div className='absolute bottom-8 left-8 bg-white/80 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gray-200/50 w-[300px]'>
-              <div className='flex items-center justify-between mb-2'>
-                <div className='p-2 bg-blue-100 text-blue-600 rounded-full'>
-                  {activeSolution.visual.card.icon}
-                </div>
-                {activeSolution.visual.card.isPopular && (
-                  <span className='text-xs font-semibold bg-blue-600 text-white px-3 py-1 rounded-full'>
-                    Popular
-                  </span>
-                )}
-              </div>
-              <h4 className='font-bold text-gray-800 mb-1'>{activeSolution.visual.card.title}</h4>
-              <p className='text-sm text-gray-600 mb-3'>{activeSolution.visual.card.description}</p>
-              <div className='flex items-center gap-2 text-xs text-gray-500'>
-                <FiUsers />
-                <span>{activeSolution.visual.card.status}</span>
-              </div>
-            </div> */}
-          </div>
-
-          {/* Right Column: Content */}
-          <div>
-            <h2 className='text-5xl font-heading text-gray-900 mb-8'>Solutions by role</h2>
-            <div className='flex flex-col border-t border-gray-200'>
-              {solutionsData.map((solution) => (
-                <div
-                  key={solution.id}
-                  className='py-6 border-b border-gray-200 cursor-pointer'
-                  onMouseEnter={() => setActiveSolutionId(solution.id)}
-                >
-                  <h3 className='text-xl font-medium text-gray-800'>{solution.role}</h3>
-                  <div
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      activeSolutionId === solution.id ? "max-h-40 mt-4" : "max-h-0"
-                    }`}
-                  >
-                    <h4 className='text-2xl font-semibold text-gray-900'>{solution.title}</h4>
-                    <p className='text-gray-600 my-3'>{solution.description}</p>
-                    <a
-                      href={solution.ctaLink}
-                      className='font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-2'
-                    >
-                      {solution.ctaText}
-                      <FiArrowRight />
-                    </a>
+    <section className='bg-white text-black py-12 md:py-[85px] md:pt-[100px]'>
+      <div className='max-w-[1550px] px-8 sm:px-6 mx-auto mb-12 md:mb-16 '>
+        <h2
+          data-aos='fade-right'
+          data-aos-delay='20'
+          className='text-[28px] max-w-[1000px] md:text-[48px] leading-[1.2] font-bold'
+        >
+          AI that understands you, your team and your goals.
+        </h2>
+        <p
+          data-aos='fade-up-right'
+          data-aos-delay='200'
+          className='mt-4 text-base md:text-[22px] text-gray-600 max-w-xl'
+        >
+          While standard AI can help you think through a work problem, Evro knows the bigger
+          picture: your goals, your team’s working styles, and your organisation’s objectives.{" "}
+        </p>
+      </div>
+      <div className='relative' data-aos='fade-up' data-aos-delay='500'>
+        <Swiper
+          modules={[Autoplay]}
+          onSwiper={setSwiperInstance}
+          onSlideChange={(s) => {
+            setActiveIndex(s.realIndex);
+            setProgressPct(0);
+          }}
+          onAutoplayTimeLeft={(_, __, p) =>
+            setProgressPct(Math.min(Math.max((1 - p) * 100, 0), 100))
+          }
+          slidesPerView='auto'
+          centeredSlides
+          spaceBetween={16}
+          autoplay={{ delay: SLIDE_DELAY, disableOnInteraction: false }}
+          className='!pb-12 md:!pb-16'
+        >
+          {solutionsData.map((slide, index) => (
+            <SwiperSlide key={index} className='max-w-[1250px] md:px-0 px-6 w-full mx-auto'>
+              <div
+                className={`flex flex-col rounded-[32px] overflow-hidden bg-gray-50 md:grid md:grid-cols-2 `}
+              >
+                <div className='p-6 flex flex-col justify-center md:p-10 md:px-16'>
+                  <div className='flex justify-between items-start'>
+                    <h3 className='text-2xl uppercase text-black max-w-[85%] md:text-[48px] font-heading leading-[1.1] md:leading-[0.9] tracking-[-0.5px] md:tracking-[-1px]'>
+                      {slide.title}
+                    </h3>
                   </div>
+                  <p className='text-base md:text-lg text-gray-600 mt-4'>{slide.description}</p>
                 </div>
-              ))}
-            </div>
+                <div
+                  className={`bg-gray-100 flex items-center justify-center min-h-[250px] h-[300px] md:h-[600px]`}
+                  style={{ backgroundColor: slide.accentColor }}
+                >
+                  <img
+                    src={slide.visual.imageSrc}
+                    alt={slide.visual.altText}
+                    className='w-full h-full object-contain'
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className='absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10'>
+          <button
+            onClick={handlePlayPause}
+            className='w-8 h-8 md:w-10 md:h-10 bg-gray-200 text-black/50 rounded-full flex items-center justify-center transition-colors'
+            aria-label={isPlaying ? "Pause" : "Play"}
+          >
+            {isPlaying ? <FaPause /> : <FaPlay />}
+          </button>
+          <div className='flex items-center gap-2 rounded-full bg-gray-200 py-2.5 px-4'>
+            {solutionsData.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className='relative flex items-center justify-center'
+              >
+                {i === activeIndex ? (
+                  <div className='h-3 w-8 md:w-10 rounded-full bg-black/20 overflow-hidden'>
+                    <div
+                      className='h-full bg-black transition-all duration-100 ease-linear'
+                      style={{ width: `${progressPct}%` }}
+                    />
+                  </div>
+                ) : (
+                  <div className='h-3 w-3 cursor-pointer rounded-full bg-black/20' />
+                )}
+              </button>
+            ))}
           </div>
         </div>
       </div>

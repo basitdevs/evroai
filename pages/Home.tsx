@@ -73,18 +73,19 @@ export default function Home() {
       <Header backgroundColor={headerBgColor} />
       <main className='bg-[#f0f0f0]'>
         <Hero id='hero-section' ref={sectionRefs[0]} />
-        <Problem id='problem-section' ref={sectionRefs[1]} />
-        <div className='bg-black z-[55]'>
+        {/* <Problem id='problem-section' ref={sectionRefs[1]} /> */}
+        <div className='bg-blac z-[55]'>
           <Introduction id='introduction-section' ref={sectionRefs[2]} />
+          <Solutions />
         </div>
         <TrustSection />
 
-        <SocialProof id='social-proof-section' ref={sectionRefs[3]} />
+        {/* <SocialProof id='social-proof-section' ref={sectionRefs[3]} /> */}
 
-        <SkillsCards id='why-evro-section' ref={sectionRefs[4]} />
+        {/* <SkillsCards id='why-evro-section' ref={sectionRefs[4]} /> */}
         <PricingSection />
         <FAQ />
-        <About />
+        {/* <About /> */}
       </main>
       <Footer />
     </div>
