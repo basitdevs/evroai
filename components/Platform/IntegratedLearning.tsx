@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-// --- Component Data ---
-// All content is managed here, making it easy to update the steps.
 const learningSteps = [
   {
     title: "Learn the Concept",
@@ -13,7 +11,8 @@ const learningSteps = [
   },
   {
     title: "Explore with AI",
-    description1: 'Ask questions in plain English (“How do I give feedback without sounding harsh?”).',
+    description1:
+      "Ask questions in plain English (“How do I give feedback without sounding harsh?”).",
     description2:
       "Evro explains the topic, shares best practices, and adapts examples to your team’s context.",
   },
@@ -37,8 +36,6 @@ const learningSteps = [
   },
 ];
 
-// --- The Accordion Item Sub-Component ---
-// Breaking this out makes the main component cleaner.
 interface AccordionItemProps {
   step: number;
   title: string;
@@ -64,21 +61,21 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           <div
             className={`flex items-center justify-center w-10 h-10 rounded-full text-lg font-bold transition-colors duration-300 ${
               isOpen
-                ? "bg-cyan-600 text-white"
-                : "bg-gray-200 text-gray-700 group-hover:bg-cyan-100"
+                ? "bg-[#00C4CC] text-white"
+                : "bg-gray-200 text-gray-700 group-hover:bg-[#00C4CC]/30"
             }`}
           >
             {step}
           </div>
           <h3
             className={`text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
-              isOpen ? "text-cyan-600" : "text-gray-900"
+              isOpen ? "text-[#00C4CC]" : "text-gray-900"
             }`}
           >
             {title}
           </h3>
         </div>
-        <div className='text-gray-500'>
+        <div className='text-gray-500 ml-2'>
           {isOpen ? <FiMinus size={24} /> : <FiPlus size={24} />}
         </div>
       </button>
@@ -93,26 +90,23 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   );
 };
 
-// --- The Main Section Component ---
 const IntegratedLearning: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // Default first item to be open
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index); // Allows closing the open item
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className='bg-white py-16 lg:py-24'>
+    <section className='py-16 lg:py-24'>
       <div className='max-w-4xl mx-auto px-6 lg:px-8'>
-        {/* --- Main Heading Block --- */}
         <div className='text-center'>
-          <p className='text-lg font-semibold text-cyan-600'>Integrated Learning</p>
+          <p className='text-lg font-semibold text-[#00C4CC]'>Integrated Learning</p>
           <h1 className='mt-4 text-4xl lg:text-5xl font-bold font-heading text-gray-900 leading-tight'>
             Learn by chatting with an expert, not slides and courses.
           </h1>
         </div>
 
-        {/* --- Accordion Flow Diagram --- */}
         <div className='mt-16'>
           {learningSteps.map((step, index) => (
             <AccordionItem
@@ -122,7 +116,7 @@ const IntegratedLearning: React.FC = () => {
               isOpen={openIndex === index}
               onClick={() => handleToggle(index)}
             >
-              <div className='space-y-4 text-gray-600 leading-relaxed'>
+              <div className='space-y-4 text-gray-700 text-base md:text-lg leading-[1.5]'>
                 <p>{step.description1}</p>
                 <p>{step.description2}</p>
               </div>

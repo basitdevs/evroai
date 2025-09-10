@@ -5,6 +5,7 @@ import IntegratedLearning from "@/components/Platform/IntegratedLearning";
 import PerformanceAnalytics from "@/components/Platform/PerformanceAnalytics";
 import PlatformHero from "@/components/Platform/PlatformHero";
 import WhyEvro from "@/components/Platform/WhyEvro";
+import WorkforcePlanning from "@/components/Platform/WorkforcePlanning";
 import React from "react";
 
 const PlatformPage = () => {
@@ -16,6 +17,7 @@ const PlatformPage = () => {
         <AiAssistantsLibrary />
         <PerformanceAnalytics />
         <IntegratedLearning />
+        <WorkforcePlanning />
         <WhyEvro />
       </main>
       <Footer />

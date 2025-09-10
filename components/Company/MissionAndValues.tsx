@@ -29,7 +29,7 @@ const MissionAndValues: React.FC = () => {
     <section className='py-16 lg:py-24'>
       <div className='max-w-[1550px] mx-auto px-6 lg:px-8'>
         <div className='text-center max-w-6xl mx-auto'>
-          <h1 className='text-3xl lg:text-5xl font-bold font-heading text-black leading-tight'>
+          <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold font-heading text-black leading-tight'>
             <span className='text-[#00C4CC]'>Mission:</span> To build the human behavioural
             intelligence system for modern organisations, making psychological safety measurable and
             scalable.
@@ -51,7 +51,9 @@ const MissionAndValues: React.FC = () => {
                   {value.icon}
                 </div>
                 <h3 className='text-2xl font-semibold text-black'>{value.title}</h3>
-                <p className='mt-3 text-gray-600 leading-relaxed'>{value.description}</p>
+                <p className='mt-3 text-gray-600  text-lg lg:text-xl leading-relaxed'>
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>

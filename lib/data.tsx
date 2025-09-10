@@ -22,23 +22,19 @@ import {
   FiAlertTriangle,
 } from "react-icons/fi";
 
-// Define a constant for the icon size to ensure consistency
 const iconSize = 28;
 
 export const teamMemberData = {
-  // --- Hero Section Content ---
   title: "Solutions for Team Members",
   h1: "Progress faster. Stress less. Be your best at work.",
   h2: "Evro is your expert and fully confidential AI, ready anytime to help you practise tough conversations, prepare for key meetings, troubleshoot tricky team relationships and find your path forward without waiting for a workshop, review, or manager.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-middle-eastern-female-smiling-employee",
+  visual: "/imgs/evro-middle-eastern-female-smiling-employee.webp",
   visualAlt: "A female employee smiling, representing a team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For Individual Contributors",
   useCases: [
     {
@@ -94,19 +90,16 @@ export const teamFaq = [
 ];
 
 export const peopleLeadersData = {
-  // --- Hero Section Content ---
   title: "Solutions for People Leaders & Managers",
   h1: "Lead with confidence, not guesswork.",
   h2: "Evro acts as your AI co-pilot, helping you give better feedback, build trust, and lead high-performing teams with confidence.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-caucasian-female-employee-smiling",
+  visual: "/imgs/evro-caucasian-female-employee-smiling.webp",
   visualAlt: "A female employee smiling, representing a People Leader",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For People Leaders",
   useCases: [
     {
@@ -155,21 +148,17 @@ export const leadersFaq = [
   },
 ];
 
-
 export const peopleAndCultureData = {
-  // --- Hero Section Content ---
   title: "Solutions for People & Culture Teams",
   h1: "Build a performance culture and prove ROI.",
   h2: "Evro connects leadership development, wellbeing, and compliance directly to retention, performance, and ROI - giving HR a better seat at the strategy table.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-black-female-employee-smiling",
+  visual: "/imgs/evro-black-female-employee-smiling.webp",
   visualAlt: "A female employee smiling, representing a People & Culture team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For People & Culture Teams",
   useCases: [
     {
@@ -228,23 +217,17 @@ export const peopleFaq = [
   },
 ];
 
-
-// Define a constant for
-
 export const marketingAndSalesData = {
-  // --- Hero Section Content ---
   title: "Solutions for Marketing & Sales Teams",
   h1: "Sell smarter, market with impact.",
   h2: "Evro equips your commercial teams with AI coaching that drives bigger deals, stronger pitches, and keeps marketing and sales confidently aligned in lock step.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-southeastasian-male-smiling-employee",
+  visual: "/imgs/evro-southeastasian-male-smiling-employee.webp",
   visualAlt: "A male employee smiling, representing a Marketing & Sales team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For Sales & Marketing Teams",
   useCases: [
     {
@@ -294,21 +277,17 @@ export const salesFaq = [
   },
 ];
 
-
 export const itTeamsData = {
-  // --- Hero Section Content ---
   title: "Solutions for IT Teams",
   h1: "Keep your teams aligned under pressure.",
   h2: "Evro strengthens your IT organisation with AI tools that reduce risk, streamline collaboration, and keep teams aligned under pressure.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-latino-male-employee-smiling",
+  visual: "/imgs/evro-latino-male-employee-smiling.webp",
   visualAlt: "A male employee smiling, representing an IT team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For IT Teams",
   useCases: [
     {
@@ -363,21 +342,17 @@ export const iitFaq = [
   },
 ];
 
-
 export const operationsTeamsData = {
-  // --- Hero Section Content ---
   title: "Solutions for Operations Teams",
   h1: "Turn strategy into flawless execution.",
   h2: "Evro enables operations teams to run smoothly by aligning strategy with execution, reducing risk, and driving measurable efficiency.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "Evro-caucasian-male-employee-smiling",
+  visual: "/imgs/evro-caucasian-male-employee-smiling.webp",
   visualAlt: "A male employee smiling, representing an Operations team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For Operations Teams",
   useCases: [
     {
@@ -432,21 +407,17 @@ export const opreationsFaq = [
   },
 ];
 
-
 export const financeTeamsData = {
-  // --- Hero Section Content ---
   title: "Solutions for Finance Teams",
   h1: "See the numbers behind your people investments.",
   h2: "Evro gives finance leaders a clear line of sight into ROI, attrition costs, compliance risks, and workforce capacity, turning people investments into measurable business outcomes.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-pacificislander-female-employee-smiling",
+  visual: "/imgs/evro-pacificislander-female-employee-smiling.webp",
   visualAlt: "A female employee smiling, representing a Finance team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For Finance Teams",
   useCases: [
     {
@@ -509,21 +480,17 @@ export const financeFaq = [
   },
 ];
 
-
 export const executiveTeamsData = {
-  // --- Hero Section Content ---
   title: "Solutions for Executives & Senior Management",
   h1: "See everything that matters in real time.",
   h2: "Evro equips leaders with real-time organisational intelligence, aligning strategy, people, and performance for measurable impact.",
   ctaText: "Apply For Closed Beta",
-  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus", // Example link
+  ctaLink: "https://forms.fillout.com/t/nAxnDSwePjus",
 
-  // --- Visuals ---
-  visual: "evro-vietnamese-female-employee-smiling",
+  visual: "/imgs/evro-vietnamese-female-employee-smiling.webp",
   visualAlt: "A female employee smiling, representing an Executive team member",
-  accentColor: "#00C4CC", // Your specified brand color
+  accentColor: "#00C4CC",
 
-  // --- Use Cases Section Content ---
   useCasesTitle: "Use Cases For Executive Teams",
   useCases: [
     {
@@ -564,7 +531,6 @@ export const executiveTeamsData = {
     },
   ],
 };
-
 
 export const executiveFaq = [
   {

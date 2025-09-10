@@ -10,15 +10,15 @@ const list = [
 
 const FounderLetter: React.FC = () => {
   return (
-    <section className=' py-16 pt-20 lg:py-24 lg:pt-40'>
+    <section className=' py-16 pt-24 lg:py-24 lg:pt-40'>
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='founder-letter-frame'>
-          <div className='relative z-10 bg-white rounded-[28px] border-2 border-[#00C4CC]/50 p-8 md:p-12 shadow-2xl'>
+          <div className='relative z-10 bg-white rounded-[20px]  md:rounded-[28px] border-2 border-[#00C4CC]/50 p-8 md:p-12 shadow-xl'>
             <div className='text-center mb-12'>
-              <h1 className='text-4xl lg:text-5xl font-bold font-heading text-stone-800 leading-tight'>
+              <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-800 leading-tight'>
                 A New Behavioural Intelligence System for Work
               </h1>
-              <h2 className='mt-6 text-lg lg:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed'>
+              <h2 className='mt-6 text-base md:text-lg lg:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed'>
                 Our vision is a world where workplaces become catalysts of human flourishing, where
                 every individual’s brilliance is recognised, amplified, and supported through
                 empathy, self-awareness, and respect.
@@ -27,7 +27,7 @@ const FounderLetter: React.FC = () => {
 
             <hr className='border-[#00C4CC]/20' />
 
-            <div className='mt-12 space-y-6 text-lg text-stone-700 leading-relaxed'>
+            <div className='mt-12 space-y-6 text-base md:text-lg text-stone-700 leading-relaxed'>
               <p>Dear Reader,</p>
               <p>
                 I’m Elaine, co-founder of Evro. I wanted to write personally because the problem

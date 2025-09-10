@@ -51,13 +51,13 @@ const Hero: React.FC = () => {
     <section className='py-16 pt-20 lg:py-24 lg:pt-36 min-h-screen flex items-center justify-center'>
       <div className='max-w-[1550px] mx-auto px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 items-stretch overflow-hidden rounded-3xl shadow-subtle'>
-          <div className='relative w-full h-[450px] lg:h-auto bg-[#00C4CC]/5 flex items-end justify-center p-8 pb-0 overflow-hidden'>
+          <div className='relative w-full h-[350px] md:h-[450px] lg:h-auto bg-[#00C4CC]/5 flex items-end justify-center p-8 pb-0 overflow-hidden'>
             <div className='absolute -bottom-20 -left-20 w-48 h-48 bg-[#00C4CC]/20 rounded-full' />
             <div className='absolute -top-24 -right-12 w-72 h-72 bg-[#00C4CC]/20 rounded-full' />
             <img
               src='/imgs/solutions/evro-aboriginal-male-employee-smiling.webp'
               alt='An employee smiling, representing team solutions'
-              className='relative z-10 w-full h-full max-h-[600px] object-contain object-center drop-shadow-2xl'
+              className='relative z-10 w-full h-full max-h-[600px] mb-[-20px] md:mb-0 object-contain drop-shadow-2xl'
             />
           </div>
 
@@ -82,14 +82,16 @@ const Hero: React.FC = () => {
                   }`}
                 >
                   <span className='text-xl font-medium text-gray-800'>{solution.title}</span>
-                  <FiArrowRight
-                    className={`text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-600 ${
+
+                  <span
+                    className={`transition-all duration-300 ease-in-out group-hover:text-gray-600 ${
                       activeRoleId === solution.id
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-x-3"
-                    } `}
-                    size={24}
-                  />
+                        ? "opacity-100 translate-x-0 text-gray-600"
+                        : "opacity-0 -translate-x-3 text-gray-400"
+                    }`}
+                  >
+                    <FiArrowRight size={24} />
+                  </span>
                 </a>
               ))}
               <div className='flex-grow'></div>

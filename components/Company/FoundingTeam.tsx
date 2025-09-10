@@ -28,29 +28,25 @@ const foundingTeamData = [
   },
 ];
 
-// --- The React Component ---
 const FoundingTeam: React.FC = () => {
   return (
-    <section className='bg-white py-16 lg:py-24'>
-      <div className='max-w-7xl mx-auto px-6 lg:px-8'>
+    <section className='py-16 lg:py-24'>
+      <div className='max-w-[1550px] mx-auto px-6 lg:px-8'>
         <div className='text-center max-w-4xl mx-auto'>
           <h1 className='text-4xl lg:text-5xl font-bold font-heading text-gray-900'>Our People</h1>
         </div>
 
         <div className='mt-16'>
           <div className='text-center'>
-            <h2 className='text-3xl lg:text-4xl font-semibold font-heading text-gray-800'>
+            <h2 className='text-3xl lg:text-5xl font-semibold font-heading text-gray-800'>
               Founding Team
             </h2>
           </div>
 
           <div className='mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
             {foundingTeamData.map((member, index) => (
-              <div
-                key={index}
-                className='bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200/60'
-              >
-                <div className='bg-slate-50 p-8'>
+              <div key={index} className='bg-white rounded-[24px] shadow-md overflow-hidden z-10'>
+                <div className='bg-slate-50 relative z-10 p-8'>
                   <div className='flex flex-col sm:flex-row items-center text-center sm:text-left gap-8'>
                     <img
                       src={member.imageSrc}
@@ -73,7 +69,7 @@ const FoundingTeam: React.FC = () => {
                   </div>
                 </div>
 
-                <div className='p-8 lg:p-10 text-left space-y-5'>
+                <div className='p-8 lg:p-10 text-left space-y-5 relative z-10  text-base md:text-lg lg:text-xl text-stone-600 bg-white'>
                   {member.bio.map((paragraph, pIndex) => (
                     <p key={pIndex} className='text-gray-700 leading-relaxed'>
                       {paragraph}

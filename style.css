@@ -79,3 +79,10 @@ section.is-visible .anim-reveal {
   background-image: radial-gradient(circle, #00c5cc84 0.5px, transparent 1.5px);
   background-size: 8px 8px;
 }
+
+@media (max-width: 768px) {
+  .founder-letter-frame::after {
+    display: none;
+  }
+}
+
