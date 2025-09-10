@@ -550,3 +550,46 @@ export const executiveFaq = [
     a: "Please see the Evro Trust Centre by clicking on the link in the footer.",
   },
 ];
+
+export const solutionsData = [
+  {
+    id: "teamMembers",
+    title: "Team Members",
+    href: "/solutions/teamMembers",
+  },
+  {
+    id: "teamLeaders",
+    title: "Team Leaders",
+    href: "/solutions/teamLeaders",
+  },
+  {
+    id: "peopleCulture",
+    title: "People & Culture Teams",
+    href: "/solutions/peopleCulture",
+  },
+  {
+    id: "salesMarketing",
+    title: "Sales & Marketing Teams",
+    href: "/solutions/salesMarketing",
+  },
+  {
+    id: "it",
+    title: "IT Teams",
+    href: "/solutions/itTeams",
+  },
+  {
+    id: "operations",
+    title: "Operations Teams",
+    href: "/solutions/operations",
+  },
+  {
+    id: "finance",
+    title: "Finance Teams",
+    href: "/solutions/finance",
+  },
+  {
+    id: "executive",
+    title: "Executive Teams",
+    href: "/solutions/executive",
+  },
+];

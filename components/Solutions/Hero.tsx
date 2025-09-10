@@ -1,48 +1,7 @@
+import { solutionsData } from "@/lib/data";
 import React, { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-
-const solutionsData = [
-  {
-    id: "teamMembers",
-    title: "Team Members",
-    href: "/solutions/by-role/team-members",
-  },
-  {
-    id: "teamLeaders",
-    title: "Team Leaders",
-    href: "/solutions/by-role/team-leaders",
-  },
-  {
-    id: "peopleCulture",
-    title: "People & Culture Teams",
-    href: "/solutions/by-role/people-and-culture-teams",
-  },
-  {
-    id: "salesMarketing",
-    title: "Sales & Marketing Teams",
-    href: "/solutions/by-role/sales-and-marketing-teams",
-  },
-  {
-    id: "it",
-    title: "IT Teams",
-    href: "/solutions/by-role/it-teams",
-  },
-  {
-    id: "operations",
-    title: "Operations Teams",
-    href: "/solutions/by-role/operations-teams",
-  },
-  {
-    id: "finance",
-    title: "Finance Teams",
-    href: "/solutions/by-role/finance-teams",
-  },
-  {
-    id: "executive",
-    title: "Executive Teams",
-    href: "/solutions/by-role/executive-teams",
-  },
-];
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [activeRoleId, setActiveRoleId] = useState<string>(solutionsData[2].id);
@@ -73,8 +32,8 @@ const Hero: React.FC = () => {
 
             <div className='flex-grow flex flex-col border-t border-gray-100'>
               {solutionsData.map((solution) => (
-                <a
-                  key={solution.id}
+                <Link
+                  to={solution.id}
                   href={solution.href}
                   onMouseEnter={() => setActiveRoleId(solution.id)}
                   className={`group flex justify-between items-center py-5 px-6 border-b border-gray-100 transition-colors duration-300 ease-in-out ${
@@ -92,7 +51,7 @@ const Hero: React.FC = () => {
                   >
                     <FiArrowRight size={24} />
                   </span>
-                </a>
+                </Link>
               ))}
               <div className='flex-grow'></div>
             </div>

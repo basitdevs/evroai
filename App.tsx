@@ -30,14 +30,14 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/solutions' element={<SolutionPage />} />
-      <Route path='/solutions/by-role/team-members' element={<TeamMembers />} />
-      <Route path='/solutions/by-role/team-leaders' element={<TeamLeadesPage />} />
-      <Route path='/solutions/by-role/people-and-culture-teams' element={<PeopleAndCultures />} />
-      <Route path='/solutions/by-role/sales-and-marketing-teams' element={<SaleAndMarketing />} />
-      <Route path='/solutions/by-role/it-teams' element={<ITTeams />} />
-      <Route path='/solutions/by-role/operations-teams' element={<OpreationTeam />} />
-      <Route path='/solutions/by-role/finance-teams' element={<FinanceTeams />} />
-      <Route path='/solutions/by-role/executive-teams' element={<FinanceTeams />} />
+      <Route path='/solutions/teamMembers' element={<TeamMembers />} />
+      <Route path='/solutions/teamLeaders' element={<TeamLeadesPage />} />
+      <Route path='/solutions/peopleCulture' element={<PeopleAndCultures />} />
+      <Route path='/solutions/salesMarketing' element={<SaleAndMarketing />} />
+      <Route path='/solutions/itTeams' element={<ITTeams />} />
+      <Route path='/solutions/operations' element={<OpreationTeam />} />
+      <Route path='/solutions/finance' element={<FinanceTeams />} />
+      <Route path='/solutions/executive' element={<FinanceTeams />} />
       <Route path='/platform' element={<PlatformPage />} />
       <Route path='/company' element={<CompanyPage />} />
       <Route path='/privacy-statement' element={<Privacy />} />
