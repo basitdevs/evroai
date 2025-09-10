@@ -6,7 +6,6 @@ export const Hero = React.forwardRef<HTMLElement>((_, ref) => (
     className='relative bg-[#E9E9E9] pt-28 md:pt-12 overflow-hidden'
   >
     <div className='mx-auto max-w-[1550px] flex md:flex-row flex-col items-center px-6 md:pt-20 lg:pt-32 h-full relative'>
-      {/* Left Content */}
       <div className='text-left relative z-10 mt-4 md:1/2  pb-10 md:pb-36'>
         <h1
           data-aos='fade-right'

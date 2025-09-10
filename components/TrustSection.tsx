@@ -2,19 +2,12 @@ import React from "react";
 import { FiLock, FiShield, FiUsers } from "react-icons/fi";
 import { TbCertificate } from "react-icons/tb";
 
-type Feature = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  iconBgColor: string; // To style the icon background
-};
-
-const featuresData: Feature[] = [
+const featuresData = [
   {
     icon: <TbCertificate size={24} />,
     title: "SOC-2 Ready",
     description: "Evro AI is committed to meeting SOC2 standards for security and reliability.",
-    iconBgColor: "bg-blue-900/50 text-blue-400", // A semi-transparent dark blue
+    iconBgColor: "bg-blue-900/50 text-blue-400",
   },
   {
     icon: <FiLock size={24} />,
@@ -38,7 +31,7 @@ const featuresData: Feature[] = [
   },
 ];
 
-const FeatureCard: React.FC<{ feature: Feature }> = ({ feature }) => (
+const FeatureCard: React.FC<{ feature: any }> = ({ feature }) => (
   <div className='bg-gray-800/50 border border-gray-700 p-6 rounded-2xl flex flex-col items-start transition-all duration-300 hover:bg-gray-800 hover:border-gray-600'>
     <div
       className={`flex items-center justify-center h-12 w-12 rounded-full mb-5 ${feature.iconBgColor}`}
@@ -54,7 +47,6 @@ const TrustSection: React.FC = () => {
   return (
     <section id='trust' className='bg-black text-white py-24 sm:py-32'>
       <div className='mx-auto max-w-[1550px] px-6 lg:px-8'>
-        {/* Main Headings & CTA */}
         <div className='text-center'>
           <h1 className='text-[44px] lg:text-[72px] font-simebold leading-[1] tracking-normal'>
             Complete Data Confidence
@@ -70,12 +62,11 @@ const TrustSection: React.FC = () => {
               rel='noopener noreferrer'
               className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-black bg-white rounded-lg'
             >
-              See Trust Center
+              See Trust Centre
             </a>
           </div>
         </div>
 
-        {/* Feature Cards Grid */}
         <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2'>
             {featuresData.map((feature, index) => (
