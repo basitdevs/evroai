@@ -575,7 +575,7 @@ export const solutionsData = [
   {
     id: "it",
     title: "IT Teams",
-    href: "/solutions/itTeams",
+    href: "/solutions/teamsIT",
   },
   {
     id: "operations",

@@ -34,7 +34,7 @@ function App() {
       <Route path='/solutions/teamLeaders' element={<TeamLeadesPage />} />
       <Route path='/solutions/peopleCulture' element={<PeopleAndCultures />} />
       <Route path='/solutions/salesMarketing' element={<SaleAndMarketing />} />
-      <Route path='/solutions/itTeams' element={<ITTeams />} />
+      <Route path='/solutions/teamsIT' element={<ITTeams />} />
       <Route path='/solutions/operations' element={<OpreationTeam />} />
       <Route path='/solutions/finance' element={<FinanceTeams />} />
       <Route path='/solutions/executive' element={<FinanceTeams />} />
