@@ -26,7 +26,8 @@ const solutionsData = [
         isPopular: false,
       },
     },
-    accentColor: "rgba(230, 245, 233, 1)", // A light green
+    accentColor: "rgba(230, 245, 233, 1)",
+    buttonText: "Solutions For Team Members",
   },
   {
     id: "teamLeaders",
@@ -48,6 +49,7 @@ const solutionsData = [
       },
     },
     accentColor: "rgba(227, 242, 253, 1)", // A light blue
+    buttonText: "Solutions For Team Leaders",
   },
   {
     id: "peopleCulture",
@@ -69,10 +71,12 @@ const solutionsData = [
       },
     },
     accentColor: "rgba(232, 230, 245, 1)", // A light purple
+    buttonText: "Solutions For Team Leaders",
   },
 ];
 
-const Solutions: React.FC = () => {
+// const Solutions: React.FC = () => {
+export const Solutions = React.forwardRef<HTMLElement>((_, ref) => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -87,19 +91,22 @@ const Solutions: React.FC = () => {
   const goToSlide = (i: number) => swiperInstance?.slideToLoop(i) && setProgressPct(0);
 
   return (
-    <section className='bg-white text-black py-12 md:py-[85px] md:pt-[100px]'>
+    <section
+      ref={ref}
+      className='text-white bg-black rounded-t-[25px] md:rounded-t-[40px] py-12 md:py-[85px] md:pt-[100px]'
+    >
       <div className='max-w-[1550px] px-8 sm:px-6 mx-auto mb-12 md:mb-16 '>
         <h2
           data-aos='fade-right'
           data-aos-delay='20'
-          className='text-[28px] max-w-[1000px] md:text-[48px] leading-[1.2] font-bold'
+          className='text-[44px] md:text-[72px] lg:text-[82px] font-heading font-semibold uppercase max-w-[1000px] leading-[1] '
         >
           AI that understands you, your team and your goals.
         </h2>
         <p
           data-aos='fade-up-right'
           data-aos-delay='200'
-          className='mt-4 text-base md:text-[22px] text-gray-600 max-w-xl'
+          className='mt-4 text-[18px] font-medium md:text-[24px] leading-[1.3] text-gray-400 max-w-[640px]'
         >
           While standard AI can help you think through a work problem, Evro knows the bigger
           picture: your goals, your team’s working styles, and your organisation’s objectives.{" "}
@@ -125,15 +132,23 @@ const Solutions: React.FC = () => {
           {solutionsData.map((slide, index) => (
             <SwiperSlide key={index} className='max-w-[1250px] md:px-0 px-6 w-full mx-auto'>
               <div
-                className={`flex flex-col rounded-[32px] overflow-hidden bg-gray-50 md:grid md:grid-cols-2 `}
+                className={`flex flex-col rounded-[32px] overflow-hidden bg-[#101010] md:grid md:grid-cols-2 `}
               >
                 <div className='p-6 flex flex-col justify-center md:p-10 md:px-16'>
                   <div className='flex justify-between items-start'>
-                    <h3 className='text-2xl uppercase text-black max-w-[85%] md:text-[48px] font-heading leading-[1.1] md:leading-[0.9] tracking-[-0.5px] md:tracking-[-1px]'>
+                    <h3 className='text-2xl uppercase text-white max-w-[85%] md:text-[48px] font-heading leading-[1.1] md:leading-[0.9]'>
                       {slide.title}
                     </h3>
                   </div>
-                  <p className='text-base md:text-lg text-gray-600 mt-4'>{slide.description}</p>
+                  <p className='text-base md:text-xl text-gray-400 mt-4'>{slide.description}</p>
+                  <div className='flex mt-5'>
+                    <a
+                      href='/solutions'
+                      className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-white transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-black bg-white rounded-lg'
+                    >
+                      {slide.buttonText}
+                    </a>
+                  </div>
                 </div>
                 <div
                   className={`bg-gray-100 flex items-center justify-center min-h-[250px] h-[300px] md:h-[600px]`}
@@ -182,6 +197,6 @@ const Solutions: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Solutions;

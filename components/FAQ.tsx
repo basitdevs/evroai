@@ -49,13 +49,20 @@ export const FAQ = ({ data, showCta = false }: { data: any; showCta?: boolean })
           ))}
         </div>
         {showCta && (
-          <div data-aos='fade-up' data-aos-delay='400' className='flex mt-6'>
+          <div data-aos='fade-up' data-aos-delay='400' className='flex flex-wrap mt-6 gap-6'>
             <a
-              href='https://forms.fillout.com/t/nAxnDSwePjus'
+              href='https://forms.fillout.com/t/uZfJaWkLmpus'
               target='_blank'
               className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
             >
-              Apply For Closed Beta
+              Explore A Pilot For Your Team
+            </a>
+            <a
+              href='https://forms.fillout.com/t/7M17jCbgZgus'
+              target='_blank'
+              className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#000] hover:text-white transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-black border border-black bg-transparent rounded-lg'
+            >
+              Get A Sample Evro Assistant
             </a>
           </div>
         )}

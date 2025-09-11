@@ -27,22 +27,24 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/solutions' element={<SolutionPage />} />
-      <Route path='/solutions/teamMembers' element={<TeamMembers />} />
-      <Route path='/solutions/teamLeaders' element={<TeamLeadesPage />} />
-      <Route path='/solutions/peopleCulture' element={<PeopleAndCultures />} />
-      <Route path='/solutions/salesMarketing' element={<SaleAndMarketing />} />
-      <Route path='/solutions/it' element={<ITTeams />} />
-      <Route path='/solutions/operations' element={<OpreationTeam />} />
-      <Route path='/solutions/finance' element={<FinanceTeams />} />
-      <Route path='/solutions/executive' element={<FinanceTeams />} />
-      <Route path='/platform' element={<PlatformPage />} />
-      <Route path='/company' element={<CompanyPage />} />
-      <Route path='/privacy-statement' element={<Privacy />} />
-      <Route path='/terms-of-service' element={<Terms />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/solutions' element={<SolutionPage />} />
+        <Route path='/solutions/teamMembers' element={<TeamMembers />} />
+        <Route path='/solutions/teamLeaders' element={<TeamLeadesPage />} />
+        <Route path='/solutions/peopleCulture' element={<PeopleAndCultures />} />
+        <Route path='/solutions/salesMarketing' element={<SaleAndMarketing />} />
+        <Route path='/solutions/it' element={<ITTeams />} />
+        <Route path='/solutions/operations' element={<OpreationTeam />} />
+        <Route path='/solutions/finance' element={<FinanceTeams />} />
+        <Route path='/solutions/executive' element={<FinanceTeams />} />
+        <Route path='/platform' element={<PlatformPage />} />
+        <Route path='/company' element={<CompanyPage />} />
+        <Route path='/privacy-statement' element={<Privacy />} />
+        <Route path='/terms-of-service' element={<Terms />} />
+      </Routes>
+    </>
   );
 }
 

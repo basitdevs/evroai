@@ -22,9 +22,9 @@ const whyEvroBenefits = [
   },
 ];
 
-const WhyEvro: React.FC = () => {
+export const WhyEvro = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section className='py-16 lg:py-24'>
+    <section ref={ref} className='py-16 lg:py-24 rounded-t-[25px] md:rounded-t-[40px] bg-[#f0f0f0]'>
       <div className='max-w-[1550px] mx-auto px-6 lg:px-8'>
         <div className='text-center max-w-4xl mx-auto'>
           <p className='text-lg font-semibold text-[#00C4CC]'>Why Evro</p>
@@ -46,13 +46,15 @@ const WhyEvro: React.FC = () => {
             >
               <div className='text-[#00C4CC] mb-4'>{benefit.icon}</div>
               <h3 className='text-2xl font-semibold text-gray-900 mb-2'>{benefit.title}</h3>
-              <p className='text-gray-700 text-base md:text-lg leading-relaxed'>{benefit.description}</p>
+              <p className='text-gray-700 text-base md:text-lg leading-relaxed'>
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default WhyEvro;

@@ -8,26 +8,16 @@ const list = [
   "Measurement and evidence that are automated, so leaders can see progress without the administrative burden.",
 ];
 
-const FounderLetter: React.FC = () => {
+export const FounderLetter = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section className=' py-16 pt-24 lg:py-24 lg:pt-40'>
+    <section
+      ref={ref}
+      className=' py-16 bg-[#f0f0f0] lg:py-24  rounded-t-[25px] md:rounded-t-[40px] '
+    >
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='founder-letter-frame'>
           <div className='relative z-10 bg-white rounded-[20px]  md:rounded-[28px] border-2 border-[#00C4CC]/50 p-8 md:p-12 shadow-xl'>
-            <div className='text-center mb-12'>
-              <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-stone-800 leading-tight'>
-                A New Behavioural Intelligence System for Work
-              </h1>
-              <h2 className='mt-6 text-base md:text-lg lg:text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed'>
-                Our vision is a world where workplaces become catalysts of human flourishing, where
-                every individual’s brilliance is recognised, amplified, and supported through
-                empathy, self-awareness, and respect.
-              </h2>
-            </div>
-
-            <hr className='border-[#00C4CC]/20' />
-
-            <div className='mt-12 space-y-6 text-base md:text-lg text-stone-700 leading-relaxed'>
+            <div className='space-y-6 text-base md:text-lg text-stone-700 leading-relaxed'>
               <p>Dear Reader,</p>
               <p>
                 I’m Elaine, co-founder of Evro. I wanted to write personally because the problem
@@ -99,6 +89,6 @@ const FounderLetter: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default FounderLetter;

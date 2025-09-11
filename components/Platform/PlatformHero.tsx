@@ -1,19 +1,19 @@
 import React from "react";
 
-const PlatformHero: React.FC = () => {
+export const PlatformHero = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section className='pt-28 pb-16 lg:pt-40 lg:pb-24'>
+    <section ref={ref} className='pt-28 pb-16 bg-black text-white lg:pt-40 lg:pb-24'>
       <div className='max-w-[1550px] mx-auto px-6 lg:px-8'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 items-center'>
           <div className='text-center lg:text-left'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-tight text-gray-900'>
+            <h1 className='text-[44px] md:text-[72px] leading-[1] lg:text-[82px] font-heading font-semibold uppercase'>
               Like having a team of experts available
             </h1>
-            <h2 className='mt-6 text-lg md:text-xl lg:text-2xl text-gray-900 max-w-2xl mx-auto lg:mx-0 leading-relaxed'>
+            <h2 className='mt-6  max-w-2xl text-[18px] font-medium md:text-[24px] text-gray-200 leading-[1.3]  mx-auto lg:mx-0'>
               Evro maps the precise knowledge and steps experts take and turns them into adaptive AI
               assistants you can trust.
             </h2>
-            <p className='mt-6 mb-12 text-base md:text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0'>
+            <p className='mt-6 mb-12 text-[16px] font-medium md:text-[20px] text-gray-400 leading-[1.3]  max-w-2xl mx-auto lg:mx-0'>
               We capture the precise thinking steps top psychologists, leaders and workplace
               professionals use, whether in complex workplace negotiations or one-on-one
               conversations. That logic is mapped into dynamic reasoning frameworks, powering AI
@@ -23,7 +23,7 @@ const PlatformHero: React.FC = () => {
             <a
               href='https://forms.fillout.com/t/nAxnDSwePjus'
               target='_blank'
-              className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
+              className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-black bg-white rounded-lg'
             >
               Apply For Closed Beta
             </a>
@@ -42,6 +42,6 @@ const PlatformHero: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default PlatformHero;

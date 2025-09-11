@@ -7,7 +7,7 @@ export default function Terms() {
   return (
     <div className='antialiased'>
       <Header backgroundColor={"rgb(243, 244, 246)"} />
-      <main className='bg-[#E9E9E9]'>
+      <main className=''>
         <PolicyHeader title='Online Terms <br />of Service' />
         <TermsContent />
       </main>

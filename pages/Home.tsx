@@ -1,13 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
-import { Problem } from "../components/Problem";
-import { SocialProof } from "../components/SocialProof";
 import { FAQ } from "../components/FAQ";
 import { Footer } from "../components/Footer";
-import SkillsCards from "../components/SkillsCards";
-import Business from "../components/Business";
-import { About } from "../components/About";
 import { Introduction } from "@/components/Introduction";
 import Solutions from "@/components/Solutions";
 import TrustSection from "@/components/TrustSection";
@@ -15,49 +10,65 @@ import PricingSection from "@/components/PricingSection";
 
 const faqData = [
   {
-    q: "Who can apply for the beta?",
-    a: "Anyone leading or working in a team can apply. We’re especially looking for managers, HR leaders, and teams in growing organisations who want to shape the future of AI-powered culture and performance.",
+    q: "Who can join early access?",
+    a: `For teams and organisations (pilots): We’re inviting leaders of teams or departments in companies that have >50% of meetings virtually/video-based to partner with us. We have recently been running pilots with orgs between 100 - 1000 employees in a range of durations and sizes.
+
+For individuals (sample users): Anyone can sign up to try a sample Evro Assistant. It’s a simple way to explore what we’re building.`,
   },
   {
     q: "Is my data private?",
-    a: "Yes. Your conversations with Evro are completely private and are not shared with your team leader or your organisation. Conversations with Evro are analysed and de-identified for reporting purposes but never identify you personally. Data is encrypted so that Evro AI employees cannot see your conversations. Evro never trains external models on your information. You can individually delete any or all of your conversations at any time.",
+    a: `Yes. Your conversations with Evro are completely private and are not shared with your team leader or your organisation. Conversations with Evro are analysed and de-identified for reporting purposes but never identify you personally. Data is encrypted so that Evro AI employees cannot see your conversations. Evro never trains external models on your information. You can individually delete any or all of your conversations at any time.`,
   },
   {
     q: "What’s included in early access?",
-    a: "You’ll get hands-on access to the beta version of Evro, which is a limited version but contains more than half of the full version and includes our best features. You’ll also get support from the Evro AI team, and the option to request the features you want to see.",
+    a: `For teams and organisations (pilots): Free or discounted licences during the pilot, hands-on onboarding, direct support from our founding team, and ROI tracking to measure impact where feasible.
+
+For individuals (sample users): Free access to a limited set of assistants to practise conversations, get feedback, and see how Evro works.`,
   },
   {
-    q: "How much does it cost to join?",
-    a: "Beta access is free. In return, we ask for your feedback about the product via surveys and you can opt in to video interviews if you’re open to it.",
+    q: "Does it cost anything to join?",
+    a: `For organisations (pilots): Pilot partners receive free or discounted licences in exchange for feedback and co-creation of features.
+
+For individuals (sample users): Access is free during early testing. Licence access will expire at the end of the early access period.`,
   },
   {
-    q: "What will I need to do as a beta tester?",
-    a: "Use Evro to get expert support with team dynamics, communication, career development, leadership and other areas. Share your experience, and give us feedback through short surveys and optional video calls if you are open to that. No heavy lift required.",
+    q: "What will I need to do as a participant?",
+    a: `For teams and organisations (pilots): Use Evro in real scenarios (e.g., see our Solutions page for examples) and provide feedback via surveys or short sessions with our team.
+
+For individuals (sample users): Try out the assistant, share your experience in a short survey, and optionally join feedback interviews.`,
   },
   {
-    q: "How long does the beta run? Will I get free access after the beta?",
-    a: "The beta will run for three months, with regular updates and improvements along the way. We will notify you towards the end of the beta about opportunities for continued free or discounted access.",
+    q: "How long does early access last?",
+    a: `Pilots: Pilots typically run for between 4 - 12 weeks but are configurable based on your needs. Towards the end, we’ll discuss ongoing options with you.
+
+Sample users: Access is ongoing while we’re in early access. Features and assistants may change as we test and improve.`,
   },
   {
     q: "Do I need special tools or setup?",
-    a: "No. Evro is a web app accessible via secure login or SSO. Future releases will also plug into tools you already use, like Slack and Teams if you choose to authorise that. Setup is quick and simple.",
+    a: `No. Evro runs as a secure web app you can log into directly. For pilots, we’ll also provide support for single sign-on (SSO). Future releases will integrate with Slack and Teams if your organisation chooses to enable them.`,
   },
   {
-    q: "What if I want Evro for my team or my organisation?",
-    a: "If you’re interested in applying for your team or org, then please get in touch with us. If selected, our founding team will work closely with you to run a secure pilot. You’ll have a direct line for help, feedback, and co-creation sessions.",
+    q: "What if I want Evro for my whole team or organisation?",
+    a: `That’s exactly what the pilot program is for. If selected, you’ll run a secure pilot with your team, get direct support from our founders, and help shape Evro’s development.`,
   },
   {
     q: "What’s the benefit of joining early?",
-    a: "Access is free during the closed beta, which only runs for three months. There may also be early-adopter advantages like discounted pricing after launch.",
+    a: `Be first to use a new category of AI platform built by psychologists.
+
+For organisations: influence the roadmap, access discounted pricing later, and build an early case study with measurable ROI.
+
+For individuals: exclusive access to tools not yet available publicly that will help you to feel more confident in your role and enjoy work more.`,
   },
   {
-    q: "What happens after the beta?",
-    a: "We will be in touch with you to outline options for continued use, which might include free or discounted access for early testers.",
+    q: "What happens after early access?",
+    a: `Pilots: We’ll review the results with you and outline options for continued use. Early partners may retain special benefits as pricing becomes available.
+
+Sample users: You’ll be invited to stay connected and will have the option to upgrade to the full product once public launch begins.`,
   },
 ];
 
 export default function Home() {
-  const [headerBgColor, setHeaderBgColor] = useState("rgb(243, 244, 246)");
+  const [headerBgColor, setHeaderBgColor] = useState("#E9E9E9");
 
   const sectionRefs = [
     useRef<HTMLElement>(null),
@@ -116,19 +127,21 @@ export default function Home() {
       <Header backgroundColor={headerBgColor} />
       <main className='bg-[#f0f0f0]'>
         <Hero id='hero-section' ref={sectionRefs[0]} />
-        {/* <Problem id='problem-section' ref={sectionRefs[1]} /> */}
-        <div className='bg-blac z-[55]'>
+        <div className='bg-black z-[55]'>
           <Introduction id='introduction-section' ref={sectionRefs[2]} />
-          <Solutions />
+          <div className='bg-[#E9E9E9]'>
+            <Solutions ref={sectionRefs[3]} />
+          </div>
         </div>
-        <TrustSection />
-
-        {/* <SocialProof id='social-proof-section' ref={sectionRefs[3]} /> */}
-
-        {/* <SkillsCards id='why-evro-section' ref={sectionRefs[4]} /> */}
-        <PricingSection />
-        <FAQ data={faqData} showCta />
-        {/* <About /> */}
+        <div className='bg-black'>
+          <TrustSection ref={sectionRefs[4]} />
+        </div>
+        <div className='bg-[#E9E9E9]'>
+          <PricingSection ref={sectionRefs[5]} />
+        </div>
+        <div className='bg-[#f0f0f0]' ref={sectionRefs[6]}>
+          <FAQ data={faqData} showCta />
+        </div>
       </main>
       <Footer />
     </div>

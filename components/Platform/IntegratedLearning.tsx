@@ -90,7 +90,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   );
 };
 
-const IntegratedLearning: React.FC = () => {
+// const IntegratedLearning: React.FC = () => {
+export const IntegratedLearning = React.forwardRef<HTMLElement>((_, ref) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleToggle = (index: number) => {
@@ -98,11 +99,11 @@ const IntegratedLearning: React.FC = () => {
   };
 
   return (
-    <section className='py-16 lg:py-24'>
-      <div className='max-w-4xl mx-auto px-6 lg:px-8'>
+    <section ref={ref} className='py-16 lg:py-24 rounded-t-[25px] md:rounded-t-[40px] bg-[#f0f0f0]'>
+      <div className='max-w-[1200px] mx-auto px-6 lg:px-8'>
         <div className='text-center'>
           <p className='text-lg font-semibold text-[#00C4CC]'>Integrated Learning</p>
-          <h1 className='mt-4 text-4xl lg:text-5xl font-bold font-heading text-gray-900 leading-tight'>
+          <h1 className='mt-4 text-[44px] md:text-[72px] font-heading font-semibold uppercase text-gray-900 leading-[1]'>
             Learn by chatting with an expert, not slides and courses.
           </h1>
         </div>
@@ -126,6 +127,6 @@ const IntegratedLearning: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default IntegratedLearning;

@@ -1,5 +1,4 @@
 import React from "react";
-import Solutions from "./Solutions";
 
 const heroFeatures = [
   {
@@ -18,11 +17,13 @@ const heroFeatures = [
 
 export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id }, ref) => {
   return (
-    <div ref={ref} id={id} className='py-20 md:py-28 rounded-[30px] md:rounded-[50px] bg-[#E9E9E9]'>
-      {/* Top Section */}
+    <div
+      ref={ref}
+      id={id}
+      className='py-20 md:py-28 rounded-t-[25px] md:rounded-t-[40px] bg-[#E9E9E9]'
+    >
       <section id='product-section' className='relative max-w-[1550px] mx-auto px-6 md:px-8'>
-        <div className='flex flex-col lg:flex-row items-center lg:items-start gap-10'>
-          {/* Text Content */}
+        <div className='flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16'>
           <div className='flex-1 text-left z-20'>
             <h1
               data-aos='fade-right'
@@ -37,14 +38,9 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
                 to communicate like a pro, collaborate like everyone wants you in their team, fix
                 problems with ease so you can progress your career and enjoy your work.{" "}
               </h2>
-              {/* <p className='text-[16px] md:text-[18px] text-black leading-[1.5]'>
-                Whereas generic AI copilots help with routine or repetitive tasks, Evro is designed
-                to help staff understand how to collaborate at their best, resolve communication
-                barriers, and get work done faster and more enjoyably.
-              </p> */}
 
               <a
-                href='/product'
+                href='/platform'
                 className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-white bg-black rounded-lg'
               >
                 Platform
@@ -52,7 +48,6 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
             </div>
           </div>
 
-          {/* Image Content */}
           <div className='flex-1 flex justify-center relative z-10'>
             <img
               src='/imgs/introMacbookEvroDash.png'
@@ -65,9 +60,7 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
         </div>
       </section>
 
-      {/* Bottom Section */}
-      <div className='max-w-[1550px] px-6 md:px-8 pt-20 mx-auto'>
-        {/* Heading + Paragraph */}
+      {/* <div className='max-w-[1550px] px-6 md:px-8 pt-20 mx-auto'>
         <div className='max-w-[750px]' data-aos='fade-right' data-aos-duration='1000'>
           <h2
             data-aos='fade-right'
@@ -87,7 +80,6 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10 my-12 md:mb-12 mb-0'>
           {heroFeatures.map((feat, i) => (
             <div
@@ -104,8 +96,7 @@ export const Introduction = React.forwardRef<HTMLElement, { id: string }>(({ id 
             </div>
           ))}
         </div>
-      </div>
-      
+      </div> */}
     </div>
   );
 });

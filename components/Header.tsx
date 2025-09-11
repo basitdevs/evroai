@@ -6,10 +6,10 @@ import { RxCross2 } from "react-icons/rx";
 const desktopNavLinks = [
   { name: "Platform", href: "/platform" },
   { name: "Solutions", href: "/solutions" },
-  { name: "Trust", href: "#trust" },
-  { name: "Resources", href: "/resources" },
+  { name: "Trust", href: "/#trust" },
+  // { name: "Resources", href: "/resources" },
   { name: "Company", href: "/company" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "Pricing", href: "/#pricing" },
 ];
 
 const DayosLogo = ({ isDark }) => (
@@ -49,17 +49,8 @@ export const Header = React.memo(({ backgroundColor }) => {
         style={headerStyle}
       >
         <div className='mx-auto px-6 max-w-[1550px] '>
-          <div className='flex items-center justify-between h-[72px]'>
+          <div className='flex items-center justify-between h-[80px]'>
             {/* Mobile/Tablet Menu Button */}
-            <div className='lg:hidden'>
-              <button
-                onClick={() => setIsMenuOpen(true)}
-                className={`p-2 -ml-2 rounded-md ${textClass}`}
-                aria-label='Open menu'
-              >
-                <MdOutlineMenu size={28} />
-              </button>
-            </div>
 
             {/* Desktop Logo */}
             <div className='hidden lg:flex'>
@@ -69,6 +60,16 @@ export const Header = React.memo(({ backgroundColor }) => {
             {/* Mobile Logo */}
             <div className='lg:hidden'>
               <DayosLogo isDark={isDarkBg} />
+            </div>
+
+            <div className='lg:hidden'>
+              <button
+                onClick={() => setIsMenuOpen(true)}
+                className={`p-2 -ml-2 rounded-md ${textClass}`}
+                aria-label='Open menu'
+              >
+                <MdOutlineMenu size={28} />
+              </button>
             </div>
 
             {/* Desktop Navigation */}
@@ -84,7 +85,7 @@ export const Header = React.memo(({ backgroundColor }) => {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : "_self"}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className={`font-medium text-sm px-2 py-1 ${
+                    className={`font-semibold text-lg px-2 py-1 ${
                       isDarkBg
                         ? "text-neutral-400 hover:text-white"
                         : "text-black/70 hover:text-black"
@@ -97,15 +98,15 @@ export const Header = React.memo(({ backgroundColor }) => {
             </nav>
 
             <a
-              href='https://forms.fillout.com/t/nAxnDSwePjus'
+              href='https://forms.fillout.com/t/uZfJaWkLmpus'
               target='_blank'
-              className={`${getStartedClasses} text-[12px] md:text-base px-3 md:px-4 py-1.5 md:py-2 transition-all duration-300 ease-in-out ${
+              className={`${getStartedClasses} md:inline-block hidden text-[12px] md:text-lg px-3 md:px-6 py-1.5 md:py-3 transition-all duration-300 ease-in-out ${
                 isDarkBg
                   ? "bg-[#00C4CC] text-black"
                   : "bg-black hover:bg-[#00C4CC] hover:text-black text-white"
               }`}
             >
-              Apply For Closed Beta
+              Explore A Pilot For Your Team
             </a>
           </div>
         </div>
@@ -129,13 +130,13 @@ export const Header = React.memo(({ backgroundColor }) => {
             </button>
             <DayosLogo isDark={true} />
             <a
-              href='https://forms.fillout.com/t/nAxnDSwePjus'
+              href='https://forms.fillout.com/t/uZfJaWkLmpus'
               target='_blank'
               className={`${getStartedClasses} text-[12px] md:text-[14px] md:text-base px-3 md:px-4 py-1.5 md:py-2 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out ${
                 isDarkBg || isMenuOpen ? "bg-[#00C4CC] text-black" : "bg-black text-white"
               }`}
             >
-              Apply For Closed Beta
+              Explore A Pilot For Your Team
             </a>
           </div>
 

@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { FiArrowUp } from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-// The DayosLogo component
 const DayosLogo = () => (
   <div className='flex-shrink-0'>
     <a href='#' className={`text-[40px] font-bold tracking-[0.5px] transition-all duration-300`}>
@@ -16,19 +15,24 @@ const DayosLogo = () => (
   </div>
 );
 
-// Updated footer data
 const footerSections = [
   {
     title: "Privacy and Terms",
     links: [
       { label: "Trust Centre", href: "https://trust.evro.ai/", target: "_blank" },
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
+      { label: "Privacy", href: "/privacy-statement" },
+      { label: "Terms", href: "/terms-of-service" },
     ],
   },
   {
     title: "Newsletter",
-    links: [{ label: "Subscribe to our newsletter", href: "#", target: "_blank" }],
+    links: [
+      {
+        label: "Subscribe to our newsletter",
+        href: "https://preview.mailerlite.io/forms/1705936/163148231391315767/share",
+        target: "_blank",
+      },
+    ],
   },
   {
     title: "Socials",
@@ -39,15 +43,24 @@ const footerSections = [
         target: "_blank",
         icon: <FaLinkedin size={24} />,
       },
-      { name: "X (Twitter)", href: "#", target: "_blank", icon: <FaXTwitter size={24} /> },
+      {
+        name: "X (Twitter)",
+        href: "https://x.com/evroai",
+        target: "_blank",
+        icon: <FaXTwitter size={24} />,
+      },
+      {
+        name: "Youtube",
+        href: "https://www.youtube.com/@EvroAI",
+        target: "_blank",
+        icon: <FaYoutube size={24} />,
+      },
     ],
   },
 ];
 
 export const Footer = React.memo(() => {
-  // --- CORRECTED: Email protection script now targets a class to handle both links ---
   useEffect(() => {
-    // Select all elements that should be converted into a protected email link
     const emailElements = document.querySelectorAll(".protected-email-link");
 
     if (emailElements.length > 0) {
@@ -62,22 +75,19 @@ export const Footer = React.memo(() => {
       };
 
       emailElements.forEach((el) => {
-        // 1. Set the visible text to the correct email format
         el.textContent = `${u}@${d}.${tld}`;
         el.setAttribute("aria-label", `Email ${u} at ${d} dot ${tld}`);
 
-        // 2. Add the click event listener to create the mailto link
         el.addEventListener("click", handleEmailClick);
       });
 
-      // Cleanup function to remove listeners when the component unmounts
       return () => {
         emailElements.forEach((el) => {
           el.removeEventListener("click", handleEmailClick);
         });
       };
     }
-  }, []); // Empty dependency array ensures this runs only once
+  }, []);
 
   return (
     <footer className='bg-black text-white '>
@@ -101,14 +111,15 @@ export const Footer = React.memo(() => {
               </a>
             </div>
 
-            {/* --- FIXED: Contact info for Desktop --- */}
             <div className='mt-6 hidden lg:block'>
               <p className='text-[18px]'>Have questions or want to chat?</p>
               <p className='text-[18px] mt-1'>
                 Drop us a line →
-                <a href='#' rel='nofollow' className='protected-email-link text-[#00c4cc] ml-[5px]'>
-                  {/* This content is replaced by the script */}
-                </a>
+                <a
+                  href='#'
+                  rel='nofollow'
+                  className='protected-email-link text-[#00c4cc] ml-[5px]'
+                ></a>
                 <noscript>
                   <span style={{ unicodeBidi: "bidi-override" }}>hello [at] evro [dot] ai</span>
                 </noscript>
@@ -155,14 +166,15 @@ export const Footer = React.memo(() => {
               </div>
             ))}
 
-            {/* --- FIXED: Contact info for Mobile/Tablet --- */}
             <div className='mt-3 block lg:hidden w-full'>
               <p className='text-[12px]'>Have questions or want to chat?</p>
               <p className='text-[12px] mt-1'>
                 Drop us a line →{" "}
-                <a href='#' rel='nofollow' className='protected-email-link text-[#00c4cc] pl-0.5'>
-                  {/* This content is replaced by the script */}
-                </a>
+                <a
+                  href=''
+                  rel='nofollow'
+                  className='protected-email-link text-[#00c4cc] pl-0.5'
+                ></a>
                 <noscript>
                   <span style={{ unicodeBidi: "bidi-override" }}>hello [at] evro [dot] ai</span>
                 </noscript>

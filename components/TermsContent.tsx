@@ -1,483 +1,516 @@
 import React from "react";
+import {
+  FiUserCheck,
+  FiDatabase,
+  FiDollarSign,
+  FiXCircle,
+  FiAlertTriangle,
+  FiBookOpen,
+} from "react-icons/fi";
 
-const TermsContent = () => {
+const SectionHeading = ({ number, title }: { number: number; title: string }) => (
+  <h2 className='text-3xl md:text-5xl font-bold font-heading mb-6 text-stone-800 border-b border-stone-200 pb-4'>
+    {number}. {title}
+  </h2>
+);
+
+export default function TermsContent() {
   return (
-    <main className='px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-300'>
+    <main className='px-4 sm:px-6 lg:px-8 py-10 border-t border-stone-200 bg-slate-50'>
       <div className='mx-auto max-w-[1000px]'>
-        {/* Header */}
-        <header>
-          <p className='text-[20px] sm:text-[24px] md:text-[26px] font-semibold text-slate-900'>
-            Last Updated: January 16, 2024
-          </p>
-          <p className='mt-5 text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed'>
-            These Terms of Service govern your access to and use of Dayos’ websites, pages,
-            community, and APIs (collectively, the “Sites”). By using the Sites, you agree to these
-            Terms.
-          </p>
+        {/* --- Header --- */}
+        <header className='mb-12'>
+          <p className='text-xl font-semibold text-stone-800'>Last Updated: 10 September 2025</p>
         </header>
 
-        {/* Main Content */}
-        <article className='mt-12 space-y-16'>
-          {/* Overview */}
-          <section id='overview' className='space-y-5'>
-            <p className='text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed'>
-              These Terms apply to your access to and use of (a){" "}
-              <span className='font-medium'>www.dayos.com</span> and{" "}
-              <span className='font-medium'>www.dayos.ai</span> and associated pages/social
-              properties, (b) any websites, materials, or documents that directly reference these
-              Terms, (c) the Community, and (d) the Dayos APIs (together, the “Sites”) provided by
-              Dayos, Inc. and its affiliates (“Dayos”, “we”, “us”, or “our”).
+        {/* --- Plain Language Summary (Callout Box) --- */}
+        <section className='bg-white p-8 rounded-2xl border border-stone-200 shadow-lg space-y-6 mb-16'>
+          <h2 className='text-2xl font-bold text-stone-800 font-heading'>Plain Language Summary</h2>
+          <p className='text-lg text-stone-700'>
+            This Agreement sets out the rules for using Evro AI’s services. By signing up or using
+            the platform, you agree to these terms.
+          </p>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4'>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiUserCheck size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Access & Use:</strong> You get a non-exclusive licence for internal business
+                use during your subscription.
+              </span>
+            </div>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiDatabase size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Data & AI Output:</strong> You own your data and its AI outputs. We own our
+                tech.
+              </span>
+            </div>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiDollarSign size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Payments:</strong> Fees are non-refundable and auto-renew unless cancelled
+                30 days prior.
+              </span>
+            </div>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiXCircle size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Acceptable Use:</strong> No illegal use or building competing products with
+                our service.
+              </span>
+            </div>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiAlertTriangle size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Liability:</strong> Services are “as is.” Our liability is capped at 12
+                months of fees paid.
+              </span>
+            </div>
+            <div className='flex items-start'>
+              <span className='mr-3 mt-1 text-cyan-600 flex-shrink-0'>
+                <FiBookOpen size={20} />
+              </span>
+              <span className='text-stone-700'>
+                <strong>Disputes:</strong> Governed by NSW law (Sydney courts).
+              </span>
+            </div>
+          </div>
+          <p className='text-base text-stone-500 italic pt-4 border-t border-stone-200'>
+            This summary is to help you understand the key points. The full legal terms below are
+            binding.
+          </p>
+        </section>
+
+        {/* --- Main Content Article --- */}
+        <article className='mt-16 space-y-16 text-lg text-stone-700 leading-relaxed'>
+          <section id='intro'>
+            <p>
+              These Terms of Service (the “Agreement”) constitute a legally binding agreement
+              between Evro AI Pty Ltd (ACN 686 025 454) (“Evro AI”, “we”, “us”, or “our”) and the
+              entity or organisation subscribing to the Services (“Customer” or “you”).
+            </p>
+            <p className='mt-4'>
+              This Agreement governs the access and use of Evro AI’s Services by the Customer and
+              any individuals authorised by the Customer to use the Services (each, an “Authorised
+              User”). By executing an Order Form that references this Agreement, or by accessing or
+              using the Services, you agree to be bound by its terms.
+            </p>
+            <p className='mt-4'>
+              If you are entering into this Agreement on behalf of a company, organisation, or
+              another legal entity, you represent that you have the authority to bind such entity
+              and its affiliates to this Agreement. If you do not have such authority, or if you do
+              not agree with these terms, you must not accept this Agreement and may not use the
+              Services.
             </p>
           </section>
 
-          {/* Supplemental Terms */}
-          <section id='supplemental-terms' className='space-y-5'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              Supplemental Terms
-            </h3>
-            <p className='text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed'>
-              We may supply different or additional terms for some Sites or products (“Supplemental
-              Terms”). Supplemental Terms are incorporated by reference and control if there’s a
-              conflict with these Terms, including:
+          <section id='definitions'>
+            <SectionHeading number={1} title='Definitions' />
+            <div className='space-y-4'>
+              <p>
+                <strong>“Affiliate”</strong> means any entity that directly or indirectly controls,
+                is controlled by, or is under common control with the subject entity.
+              </p>
+              <p>
+                <strong>“AI Output”</strong> means any data, text, reports, or other content
+                generated, returned, or synthesised by the Services based on Customer Data or
+                queries submitted by Authorised Users.
+              </p>
+              <p>
+                <strong>“Authorised User”</strong> means an individual employee, contractor, or
+                agent of the Customer who is authorised by the Customer to use the Services in
+                accordance with this Agreement.
+              </p>
+              <p>
+                <strong>“Confidential Information”</strong> means all information disclosed by one
+                party to the other, whether orally or in writing, that is designated as confidential
+                or that reasonably should be understood to be confidential given the nature of the
+                information and the circumstances of disclosure.
+              </p>
+              <p>
+                <strong>“Customer Data”</strong> means all electronic data, information, content,
+                and materials provided or submitted by or on behalf of the Customer or its
+                Authorised Users to the Services. Customer Data does not include AI Output.
+              </p>
+              <p>
+                <strong>“Documentation”</strong> means the applicable security and compliance
+                documentation, user guides, and policies for the Services, as updated from time to
+                time.
+              </p>
+              <p>
+                <strong>“Intellectual Property Rights”</strong> means all patents, copyrights, moral
+                rights, trademarks, trade secrets, and any other form of intellectual property
+                rights recognised in any jurisdiction, including applications and registrations for
+                any of the foregoing.
+              </p>
+              <p>
+                <strong>“Order Form”</strong> means the ordering documents or online order
+                specifying the Services to be provided hereunder that is entered into between
+                Customer and Evro AI.
+              </p>
+              <p>
+                <strong>“Services”</strong> means the AI-powered Software-as-a-Service platform and
+                related functionalities provided by Evro AI to support organisational performance,
+                leadership development, and workplace wellbeing, as specified in the applicable
+                Order Form.
+              </p>
+              <p>
+                <strong>“Subscription Term”</strong> means the period during which Customer and its
+                Authorised Users are permitted to access and use the Services, as set forth in the
+                relevant Order Form.
+              </p>
+            </div>
+          </section>
+
+          <section id='services'>
+            <SectionHeading number={2} title='The Services' />
+            <p>
+              <strong>2.1. Provision of Services.</strong> Subject to the terms of this Agreement,
+              Evro AI will use commercially reasonable efforts to provide the Services to the
+              Customer and its Authorised Users. We grant the Customer a limited, non-exclusive,
+              non-transferable, non-sublicensable right to access and use the Services during the
+              Subscription Term solely for its internal business purposes.
             </p>
-            <ul className='list-disc pl-6 space-y-2 text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
+            <p className='mt-4'>
+              <strong>2.2. Service Modifications.</strong> We reserve the right to enhance, modify,
+              or discontinue features of the Services at our discretion. We will not, however, make
+              any changes that materially decrease the core functionality of the Services purchased
+              by the Customer during the then-current Subscription Term without providing at least
+              thirty (30) days’ prior written notice.
+            </p>
+            <p className='mt-4'>
+              <strong>2.3. Customer Responsibilities.</strong> The Customer is responsible for (a)
+              its Authorised Users’ compliance with this Agreement; (b) the accuracy, quality, and
+              legality of Customer Data; (c) using the Services in accordance with all applicable
+              laws and regulations; and (d) all activities that occur under its and its Authorised
+              Users’ accounts.
+            </p>
+          </section>
+
+          <section id='account-management'>
+            <SectionHeading number={3} title='Account Management and Security' />
+            <p>
+              <strong>3.1. Account Registration.</strong> Customer and its Authorised Users must
+              provide accurate, current, and complete information during the registration process.
+            </p>
+            <p className='mt-4'>
+              <strong>3.2. Security.</strong> The Customer is responsible for maintaining the
+              confidentiality and security of its account credentials. The use of strong passwords
+              and multi-factor authentication (where available) is required. The Customer will
+              prevent unauthorised access to or use of the Services and will notify Evro AI promptly
+              of any such unauthorised access or use or any suspected security breach.
+            </p>
+          </section>
+
+          <section id='data-ownership'>
+            <SectionHeading number={4} title='Data Ownership, Licensing, and AI Output' />
+            <p>
+              <strong>4.1. Customer Data.</strong> As between the parties, the Customer retains all
+              right, title, and interest, including all Intellectual Property Rights, in and to the
+              Customer Data. The Customer grants Evro AI and its subcontractors a worldwide,
+              non-exclusive, royalty-free license to host, copy, transmit, and display Customer Data
+              as reasonably necessary to provide, maintain, and improve the Services.
+            </p>
+            <p className='mt-4'>
+              <strong>4.2. AI Output.</strong> The Customer owns the AI Output generated from its
+              use of the Services. The Customer may use AI Output for its internal business
+              purposes. Evro AI retains all right, title, and interest in the underlying algorithms,
+              models, and mechanisms used to generate the AI Output.
+            </p>
+            <p className='mt-4'>
+              <strong>4.3. Restrictions on AI Output.</strong> AI Output may not always be unique,
+              accurate, or complete. The Customer acknowledges and agrees that it will not: a. Rely
+              on AI Output as the sole basis for any legally or materially significant decisions,
+              including but not limited to credit, employment, housing, insurance, medical, or legal
+              decisions. Independent validation is required. b. Use AI Output to develop, train, or
+              improve any other artificial intelligence or machine learning models that compete with
+              the Services.
+            </p>
+            <p className='mt-4'>
+              <strong>4.4. Data Processing.</strong> We will process Customer Data and AI Output
+              only to deliver, secure, and improve the Services. We will not use Customer Data to
+              train any public or third-party artificial intelligence models. Our data processing
+              practices are further detailed in our Privacy Policy.
+            </p>
+          </section>
+
+          <section id='acceptable-use'>
+            <SectionHeading number={5} title='Acceptable Use Policy' />
+            <p>Customer and its Authorised Users shall not:</p>
+            <ul className='list-disc pl-6 mt-4 space-y-2'>
+              <li>Use the Services for any unlawful, fraudulent, or malicious purpose.</li>
               <li>
-                <span className='font-medium'>Privacy Policy</span>: How we collect, use, and
-                safeguard your information.
+                Upload, post, or transmit any content that is illegal, harmful, defamatory,
+                infringing, harassing, or discriminatory.
               </li>
               <li>
-                <span className='font-medium'>Acceptable Use Policy</span>: Permitted and prohibited
-                uses of our services.
+                Disclose any individual’s private or personally identifiable information without
+                their express prior authorisation.
               </li>
               <li>
-                <span className='font-medium'>Service Level Agreements (SLAs)</span>: Performance
-                metrics and commitments.
+                Attempt to reverse engineer, decompile, disassemble, or otherwise discover the
+                source code or underlying ideas of the Services.
               </li>
               <li>
-                <span className='font-medium'>Payment Terms</span>: Billing practices, schedules,
-                and fees.
+                Probe, scan, or test the vulnerability of the Services or any related system or
+                network, or attempt to circumvent any security or authentication measures.
               </li>
               <li>
-                <span className='font-medium'>Product-Specific Terms</span>: Feature- or
-                offering-specific details.
+                Interfere with or disrupt the integrity or performance of the Services, including
+                through the use of viruses, spamming, or automated scripts.
               </li>
+              <li>
+                Impersonate any person or entity or misrepresent your affiliation with any person or
+                entity.
+              </li>
+              <li>Access the Services to build a competitive product or service.</li>
             </ul>
-          </section>
-
-          {/* Changes */}
-          <section id='changes' className='space-y-5'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              Changes to These Terms
-            </h3>
-            <p className='text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed'>
-              We may change these Terms from time to time. The “Last Updated” date above serves as
-              notice of changes. Unless stated otherwise, changes are effective immediately, and
-              your continued use of the Sites confirms acceptance. If you do not agree to the
-              amended Terms, you must stop using the Sites.
+            <p className='mt-4'>
+              Evro AI reserves the right to suspend or terminate any account found to be in
+              violation of this policy.
             </p>
           </section>
 
-          {/* 1. Eligibility */}
-          <section id='eligibility' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              1. Eligibility
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              You must be at least sixteen (16) years old to use the Sites. If you use the Sites on
-              behalf of another person or entity, you represent that you are authorized to accept
-              these Terms on their behalf and they agree to be responsible if you or they violate
-              these Terms. Parents/guardians of users under 18 are responsible for the user’s acts
-              or omissions.
+          <section id='privacy-security'>
+            <SectionHeading number={6} title='Privacy and Security' />
+            <p>
+              <strong>6.1. Compliance.</strong> Evro AI complies with applicable data protection
+              laws, including the Australian Privacy Act 1988 (Cth), the GDPR, and CCPA/CPRA.
+            </p>
+            <p className='mt-4'>
+              <strong>6.2. Security Measures.</strong> We implement and maintain appropriate
+              technical and organisational security measures designed to protect Customer Data from
+              unauthorised access, use, alteration, or disclosure. These measures include data
+              encryption in transit and at rest and least-privilege access controls.
+            </p>
+            <p className='mt-4'>
+              <strong>6.3. Data Hosting and Transfers.</strong> Customer Data is hosted in
+              Australia. If any cross-border data transfers are required to provide the Services,
+              they will be conducted with appropriate contractual and technical safeguards in place.
             </p>
           </section>
 
-          {/* 2. Prohibited Conduct */}
-          <section id='prohibited' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              2. Prohibited Conduct and Content
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              You agree not to violate any law, contract, or third-party right, and you’re solely
-              responsible for your conduct while using the Sites. You will not:
+          <section id='subscription-fees'>
+            <SectionHeading number={7} title='Subscription, Fees, and Payment' />
+            <p>
+              <strong>7.1. Fees.</strong> The Customer will pay all fees specified in the applicable
+              Order Form. Fees are based on the Services purchased and not actual usage. All payment
+              obligations are non-cancelable, and fees paid are non-refundable.
             </p>
-            <ul className='list-disc pl-6 space-y-2 text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              <li>Engage in harassing, threatening, predatory, or stalking conduct.</li>
-              <li>
-                Use or attempt to use another user’s account or share credentials without
-                authorization.
-              </li>
-              <li>Impersonate others or misrepresent your affiliation.</li>
-              <li>Sell, resell, or commercially use the Sites except where permitted.</li>
-              <li>
-                Copy, reproduce, distribute, publicly perform/display portions of the Sites except
-                as permitted.
-              </li>
-              <li>Modify, remove notices, or create derivative works of the Sites.</li>
-              <li>
-                Use the Sites beyond their intended purpose or in a way that disrupts operation.
-              </li>
-              <li>
-                Circumvent ordinary use, pricing, or support processes; reverse engineer or bypass
-                access controls.
-              </li>
-              <li>Scrape or extract data via robots or similar methods.</li>
-              <li>
-                Develop or use apps that interact with the Sites without prior written consent.
-              </li>
-              <li>Send spam or engage in chain letters or pyramid schemes.</li>
-              <li>Link in a way that damages/exploits our reputation or implies endorsement.</li>
-              <li>Bypass or ignore robots.txt instructions.</li>
-              <li>
-                Use the Sites for any illegal or unauthorized purpose, or in violation of these
-                Terms.
-              </li>
-            </ul>
-          </section>
-
-          {/* 3. Ownership; License */}
-          <section id='ownership' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              3. Ownership; Limited License
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              The Sites and all content are owned by Dayos or our licensors and protected by law.
-              Subject to your compliance with these Terms, you are granted a limited, nonexclusive,
-              nontransferable, non-sublicensable, revocable license to access and use the Sites for
-              evaluating or using Dayos products/services under your agreement with Dayos. Any other
-              use is prohibited and may terminate this license.
+            <p className='mt-4'>
+              <strong>7.2. Billing and Renewal.</strong> Fees, billing cycles, and payment terms are
+              specified in the Order Form. Unless otherwise stated, subscriptions will automatically
+              renew for additional periods equal to the expiring Subscription Term unless either
+              party gives the other notice of non-renewal at least thirty (30) days before the end
+              of the relevant term.
             </p>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              Journalists may contact{" "}
-              <a className='text-sky-600 underline' href='mailto:hello@dayos.com'>
-                hello@dayos.com
-              </a>{" "}
-              for images for professional publications.
+            <p className='mt-4'>
+              <strong>7.3. Late Payments.</strong> Late payments may accrue interest at the rate of
+              1.5% of the outstanding balance per month, or the maximum rate permitted by law,
+              whichever is lower. Evro AI may suspend access to the Services if any payment is more
+              than thirty (30) days overdue.
             </p>
           </section>
 
-          {/* 4. Trademarks */}
-          <section id='trademarks' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              4. Trademarks
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              Dayos names, logos, slogans, product/service names, and the look and feel of the Sites
-              are trademarks of Dayos and may not be used without permission and compliance with our
-              Trademark Usage Guidelines. Other marks belong to their respective owners and do not
-              imply endorsement.
+          <section id='confidentiality'>
+            <SectionHeading number={8} title='Confidentiality' />
+            <p>
+              <strong>8.1. Obligations.</strong> Each party (the “Receiving Party”) agrees to
+              protect the Confidential Information of the other party (the “Disclosing Party”) with
+              the same degree of care that it uses to protect its own confidential information of
+              like kind (but not less than reasonable care). The Receiving Party will not use any
+              Confidential Information of the Disclosing Party for any purpose outside the scope of
+              this Agreement and will limit access to the Disclosing Party’s Confidential
+              Information to its employees and contractors who need that access for purposes
+              consistent with this Agreement and who have signed confidentiality agreements with the
+              Receiving Party containing protections no less stringent than those herein.
+            </p>
+            <p className='mt-4'>
+              <strong>8.2. Compelled Disclosure.</strong> The Receiving Party may disclose
+              Confidential Information of the Disclosing Party to the extent compelled by law,
+              provided the Receiving Party gives the Disclosing Party prior notice of the compelled
+              disclosure (to the extent legally permitted) and reasonable assistance, at the
+              Disclosing Party's cost, if the Disclosing Party wishes to contest the disclosure.
             </p>
           </section>
 
-          {/* 5. DMCA */}
-          <section id='copyright' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              5. Repeat Infringer Policy; Copyright Complaints
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              In accordance with the DMCA and applicable laws, we may terminate accounts of repeat
-              infringers. If you believe anything on the Sites infringes your copyright, notify
-              Dayos’s designated agent per our Notice and Takedown Policy.
+          <section id='ip'>
+            <SectionHeading number={9} title='Intellectual Property' />
+            <p>
+              <strong>9.1. Evro AI IP.</strong> Evro AI and its licensors own all right, title, and
+              interest, including all related Intellectual Property Rights, in and to the Services,
+              the underlying software, platform, and Documentation. No rights are granted to the
+              Customer hereunder other than as expressly set forth in this Agreement.
+            </p>
+            <p className='mt-4'>
+              <strong>9.2. Feedback.</strong> If the Customer or any Authorised User provides any
+              suggestions, enhancement requests, or other feedback to Evro AI, the Customer grants
+              Evro AI a fully paid-up, royalty-free, worldwide, transferable, sublicensable,
+              irrevocable, perpetual license to use or incorporate such feedback into the Services
+              without obligation or compensation.
             </p>
           </section>
 
-          {/* 6. Accounts */}
-          <section id='accounts' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              6. Accounts
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              Provide accurate information and keep it updated. You consent to receiving
-              communications via the contact details in your account. Maintain account security and
-              notify us of any unauthorized access. You are responsible for all activity under your
-              account. We may reject or reclaim usernames (including for trademark reasons). In the
-              event of death, incapacity, or unavailability, we may terminate rights to your account
-              or User Content.
+          <section id='termination'>
+            <SectionHeading number={10} title='Term and Termination' />
+            <p>
+              <strong>10.1. Term.</strong> This Agreement commences on the date of the first Order
+              Form and continues until all Subscription Terms thereunder have expired or have been
+              terminated.
+            </p>
+            <p className='mt-4'>
+              <strong>10.2. Termination for Cause.</strong> Either party may terminate this
+              Agreement for cause upon thirty (30) days’ written notice to the other party of a
+              material breach if such breach remains uncured at the expiration of such period.
+            </p>
+            <p className='mt-4'>
+              <strong>10.3. Effect of Termination.</strong> Upon termination, all rights granted to
+              the Customer will immediately cease. Evro AI will have no obligation to maintain or
+              provide any Customer Data and will, unless legally prohibited, delete or irreversibly
+              anonymise all Customer Data in its systems within ninety (90) days of termination.
+              Sections 4, 8, 9, 11, 12, 13, 14, and 15 will survive any termination or expiration of
+              this Agreement.
             </p>
           </section>
 
-          {/* 7. Feedback */}
-          <section id='feedback' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              7. Feedback
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              If you submit ideas or suggestions, Dayos may use them for any purpose without
-              acknowledgment or compensation. Dayos will exclusively own improvements to Dayos
-              products/services/Sites based on such Feedback. Feedback may be treated as
-              non-confidential.
-            </p>
-          </section>
-
-          {/* 8. Third-Party Content */}
-          <section id='third-party' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              8. Third-Party Content
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              We may provide information about or links to third-party products or services, or
-              allow third parties to make their content available on/through the Sites. We do not
-              control or endorse such content and make no warranties. Your use is at your own risk
-              and may be subject to additional third-party terms.
-            </p>
-          </section>
-
-          {/* 9. Credentialing */}
-          <section id='credentialing' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              9. Credentialing
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              We may offer credentials (e.g., digital badges/certificates). Provision of credentials
-              does not create a contractual relationship or guarantee (including employment). Use of
-              credentials must comply with the credential terms.
-            </p>
-          </section>
-
-          {/* 10. Indemnification */}
-          <section id='indemnification' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              10. Indemnification
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              To the fullest extent permitted by law, you will indemnify, defend, and hold harmless
-              Dayos and its affiliates and their officers, directors, agents, partners, and
-              employees from any claims, losses, liabilities, damages, and expenses (including legal
-              fees) arising from or related to your use of the Sites, sharing credentials without
-              authorization, Feedback, violation of these Terms, infringement of rights, or conduct
-              in connection with the Sites. Dayos may control the defense/settlement.
-            </p>
-          </section>
-
-          {/* 11. Disclaimers */}
-          <section id='disclaimers' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              11. Disclaimers
-            </h3>
-            <div className='rounded-xl border border-slate-200 bg-slate-50 p-4'>
-              <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-                YOUR USE OF THE SITES IS AT YOUR SOLE RISK. EXCEPT AS OTHERWISE PROVIDED IN A
-                WRITING BY US AND TO THE FULLEST EXTENT PERMITTED BY LAW, THE SITES AND ANY CONTENT
-                ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR
-                IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
-                NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SITES ARE ACCURATE, COMPLETE, RELIABLE,
-                CURRENT, FREE OF HARMFUL COMPONENTS, ERROR-FREE, OR UNINTERRUPTED. THIRD- PARTY
-                PRODUCTS/SERVICES ACCESSED VIA THE SITES ARE GOVERNED BY YOUR AGREEMENTS WITH THOSE
-                THIRD PARTIES; Dayos DISCLAIMS ALL WARRANTIES AND LIABILITY WITH RESPECT TO THEM
-                (INCLUDING INTEROPERABILITY OR RECOMMENDATIONS).
+          <section id='warranties'>
+            <SectionHeading number={11} title='Warranties and Disclaimers' />
+            <div className='p-6 rounded-lg border border-amber-300 bg-amber-50 text-amber-900'>
+              <p>
+                EXCEPT AS EXPRESSLY PROVIDED HEREIN, THE SERVICES ARE PROVIDED “AS IS” AND “AS
+                AVAILABLE.” EVRO AI DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY,
+                OR OTHERWISE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+                PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT, TO THE MAXIMUM EXTENT PERMITTED BY
+                APPLICABLE LAW. EVRO AI DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED,
+                ERROR-FREE, OR THAT AI OUTPUTS WILL BE ACCURATE OR RELIABLE.
               </p>
             </div>
           </section>
 
-          {/* 12. Limitation of Liability */}
-          <section id='liability' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              12. Limitation of Liability
-            </h3>
-            <ul className='list-decimal pl-6 space-y-2 text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              <li>
-                To the fullest extent permitted by law, the Dayos Parties are not liable for any
-                indirect, consequential, incidental, special damages, or lost profits, even if
-                advised of the possibility.
-              </li>
-              <li>
-                The total liability of the Dayos Parties for any claim arising out of or relating to
-                these Terms or the Sites is limited to <span className='font-medium'>$100</span>.
-              </li>
-              <li>
-                Some jurisdictions do not allow certain exclusions/limitations; in those cases,
-                portions of this Section may not apply.
-              </li>
-            </ul>
-          </section>
-
-          {/* 13. Release */}
-          <section id='release' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              13. Release
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              To the fullest extent permitted by law, you release Dayos and the Dayos Parties from
-              all claims, demands, and damages (actual and consequential) of every kind and nature,
-              known and unknown, arising out of or related to disputes between users or
-              acts/omissions of third parties. If you are a California consumer, you waive
-              California Civil Code § 1542:
+          <section id='liability'>
+            <SectionHeading number={12} title='Limitation of Liability' />
+            <p>
+              <strong>12.1. Exclusion of Damages.</strong> IN NO EVENT WILL EITHER PARTY BE LIABLE
+              FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, SPECIAL, OR EXEMPLARY DAMAGES,
+              INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOST PROFITS, GOODWILL, OR DATA, ARISING OUT
+              OF OR IN CONNECTION WITH THIS AGREEMENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+              DAMAGES.
             </p>
-            <blockquote className='border-l-4 border-slate-300 pl-4 italic text-slate-700'>
-              “A general release does not extend to claims that the creditor or releasing party does
-              not know or suspect to exist in his or her favor at the time of executing the release
-              and that if known by him or her, would have materially affected his or her settlement
-              with the debtor or released party.”
-            </blockquote>
-          </section>
-
-          {/* 14. Processing Data */}
-          <section id='processing' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              14. Processing Data
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              For information on how we collect, use, share, and otherwise process information about
-              you, see our Privacy Statement. The Privacy Statement does not constitute Supplemental
-              Terms.
+            <p className='mt-4'>
+              <strong>12.2. Liability Cap.</strong> TO THE MAXIMUM EXTENT PERMITTED BY LAW, EACH
+              PARTY’S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT WILL NOT
+              EXCEED THE TOTAL AMOUNT PAID BY THE CUSTOMER HEREUNDER IN THE TWELVE (12) MONTHS
+              PRECEDING THE FIRST INCIDENT OUT OF WHICH THE LIABILITY AROSE.
+            </p>
+            <p className='mt-4'>
+              <strong>12.3. Exclusions.</strong> The limitations in this Section 12 will not apply
+              to liability for death, personal injury, fraud, or wilful misconduct, or any other
+              liability which cannot be excluded or limited under applicable law.
             </p>
           </section>
 
-          {/* 15. Promotions */}
-          <section id='promotions' className='space-y-4'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              15. Promotions
-            </h3>
-            <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-              Any sweepstakes, contests, raffles, surveys, games, or similar promotions made
-              available through the Sites may be governed by separate rules. Review those rules and
-              our Privacy Statement. If Promotion rules conflict with these Terms, the Promotion
-              rules govern.
+          <section id='indemnification'>
+            <SectionHeading number={13} title='Indemnification' />
+            <p>
+              The Customer agrees to defend, indemnify, and hold harmless Evro AI, its affiliates,
+              officers, directors, employees, and agents from and against any and all claims,
+              damages, obligations, losses, liabilities, costs, or debt, and expenses (including but
+              not limited to attorney's fees) arising from: (a) the Customer’s or its Authorised
+              Users’ breach of this Agreement; (b) Customer Data that infringes the Intellectual
+              Property Rights or privacy rights of a third party; or (c) the Customer’s or its
+              Authorised Users’ misuse of the Services in violation of applicable law.
             </p>
           </section>
 
-          {/* 16. Governing Law; Dispute Resolution; Binding Arbitration */}
-          <section id='arbitration' className='space-y-6'>
-            <h3 className='font-bold font-heading uppercase text-[24px] sm:text-[28px] md:text-[36px] tracking-tight'>
-              16. Governing Law; Dispute Resolution; Binding Arbitration
-            </h3>
+          <section id='governing-law'>
+            <SectionHeading number={14} title='Governing Law and Dispute Resolution' />
+            <p>
+              <strong>14.1. Governing Law.</strong> This Agreement shall be governed by and
+              construed in accordance with the laws of New South Wales, Australia, without regard to
+              its conflict of law principles.
+            </p>
+            <p className='mt-4'>
+              <strong>14.2. Dispute Resolution.</strong> The parties agree to the exclusive
+              jurisdiction of the state and federal courts located in Sydney, New South Wales. For
+              disputes involving a party domiciled outside of Australia, the parties agree to submit
+              the dispute to binding arbitration under the Rules of Arbitration of the International
+              Chamber of Commerce (ICC). The arbitration shall be seated in Singapore and conducted
+              in the English language.
+            </p>
+            <p className='mt-4'>
+              <strong>14.3. Injunctive Relief.</strong> Notwithstanding the foregoing, nothing in
+              this Agreement will prevent Evro AI from seeking injunctive or other equitable relief
+              in any court of competent jurisdiction to protect its Intellectual Property Rights.
+            </p>
+          </section>
 
-            <div className='rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900'>
-              <p className='text-sm sm:text-base leading-relaxed'>
-                PLEASE READ: YOU AND DAYOS AGREE TO ARBITRATE CERTAIN DISPUTES ON AN INDIVIDUAL
-                BASIS. NO CLASS ACTIONS OR CLASS ARBITRATIONS. YOU ARE WAIVING THE RIGHT TO A JURY
-                TRIAL. CONSUMERS MAY HAVE AN OPT-OUT RIGHT AS PROVIDED BY LAW.
+          <section id='general-provisions'>
+            <SectionHeading number={15} title='General Provisions' />
+            <p>
+              <strong>15.1. Entire Agreement.</strong> This Agreement, including all exhibits,
+              addenda, and Order Forms, constitutes the entire agreement between the parties and
+              supersedes all prior and contemporaneous agreements, proposals, or representations,
+              written or oral, concerning its subject matter.
+            </p>
+            <p className='mt-4'>
+              <strong>15.2. Assignment.</strong> Neither party may assign any of its rights or
+              obligations hereunder, whether by operation of law or otherwise, without the other
+              party’s prior written consent (not to be unreasonably withheld); provided, however,
+              either party may assign this Agreement in its entirety without the other party's
+              consent to its Affiliate or in connection with a merger, acquisition, corporate
+              reorganisation, or sale of all or substantially all of its assets.
+            </p>
+            <p className='mt-4'>
+              <strong>15.3. Force Majeure.</strong> Neither party shall be liable for any failure or
+              delay in performance under this Agreement (other than for delay in the payment of
+              money) due to causes beyond its reasonable control, including but not limited to acts
+              of God, war, terrorism, riots, embargoes, or acts of civil or military authorities.
+            </p>
+            <p className='mt-4'>
+              <strong>15.4. Notices.</strong> All notices under this Agreement must be in writing
+              and will be deemed to have been duly given when received, if personally delivered;
+              when receipt is electronically confirmed, if transmitted by email; or the day after it
+              is sent, if sent for next day delivery by recognised overnight delivery service.
+            </p>
+            <p className='mt-4'>
+              <strong>15.5. Severability.</strong> If any provision of this Agreement is held by a
+              court of competent jurisdiction to be contrary to law, the provision will be deemed
+              null and void, and the remaining provisions of this Agreement will remain in effect.
+            </p>
+            <p className='mt-4'>
+              <strong>15.6. Changes.</strong> We may update this Agreement from time to time.
+              Updates will be posted on our website with a revised “Last Updated” date. We will
+              provide at least thirty (30) days' notice of material changes, either through the
+              Services or by email. Continued use of the Services after the effective date of any
+              changes will constitute acceptance of the modified terms.
+            </p>
+          </section>
+
+          <section id='contact-us'>
+            <SectionHeading number={16} title='Contact Information' />
+            <address className='not-italic mt-4 p-6 bg-white rounded-lg border border-stone-200'>
+              <p className='font-semibold'>Evro AI Pty Ltd</p>
+              <p>Attn: Legal Department</p>
+              <p>
+                Email:{" "}
+                <a href='mailto:legal@evro.ai' className='text-cyan-600 hover:underline'>
+                  legal@evro.ai
+                </a>
               </p>
-            </div>
-
-            {/* (a) Informal Resolution */}
-            <div className='space-y-3'>
-              <h4 className='font-semibold text-xl sm:text-2xl'>
-                a) Informal Dispute Resolution Prior to Arbitration
-              </h4>
-              <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-                Before filing a claim, both parties agree to attempt to resolve the dispute
-                informally. If you assert a claim, send a written notice (“Claimant Notice”) by
-                certified mail to the addresses below and email{" "}
-                <a href='mailto:legal@dayos.com' className='text-sky-600 underline'>
-                  legal@dayos.com
-                </a>{" "}
-                including: your name, address, email, phone, nature/basis of the claim, and relief
-                sought. If Dayos asserts a claim, we will email the primary email on your account
-                with similar details. If not resolved within 30 days of receipt, either party may
-                commence arbitration. Statutes of limitations and filing fee deadlines are tolled
-                during this 30-day period.
-              </p>
-
-              <div className='grid sm:grid-cols-2 gap-4'>
-                <div className='rounded-lg border border-slate-200 p-4'>
-                  <p className='font-medium text-slate-900'>Mailing Address (U.S.)</p>
-                  <address className='not-italic text-slate-700'>
-                    400 Concar Drive
-                    <br />
-                    San Mateo, CA 94402, USA
-                  </address>
-                </div>
-                <div className='rounded-lg border border-slate-200 p-4'>
-                  <p className='font-medium text-slate-900'>Mailing Address (Non-U.S.)</p>
-                  <address className='not-italic text-slate-700'>
-                    15 Beach Road, 2nd Floor
-                    <br />
-                    Singapore, 189677
-                  </address>
-                </div>
-              </div>
-            </div>
-
-            {/* (b) Claims Subject to Arbitration; Exceptions */}
-            <div className='space-y-3'>
-              <h4 className='font-semibold text-xl sm:text-2xl'>
-                b) Claims Subject to Binding Arbitration; Exceptions
-              </h4>
-              <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-                Except for small claims court matters and disputes exclusively about the
-                intellectual property rights of either party (including requests for injunctive or
-                equitable relief), all claims not resolved under (a) are resolved by final and
-                binding arbitration before a neutral arbitrator, rather than in court. The
-                arbitrator may grant any relief available in court.
-              </p>
-            </div>
-
-            {/* (c) FAA */}
-            <div className='space-y-3'>
-              <h4 className='font-semibold text-xl sm:text-2xl'>c) Federal Arbitration Act</h4>
-              <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-                These Terms affect interstate commerce, and the Federal Arbitration Act (FAA)
-                governs this Section to the extent permitted by law.
-              </p>
-            </div>
-
-            {/* (d) Procedure – Consumers & Businesses */}
-            <div className='space-y-3'>
-              <h4 className='font-semibold text-xl sm:text-2xl'>
-                d) Arbitration Procedure (Consumers &amp; Businesses)
-              </h4>
-              <p className='text-slate-700 text-base sm:text-lg md:text-xl leading-relaxed'>
-                All claims are administered by the American Arbitration Association (AAA) before one
-                arbitrator under applicable AAA rules. Consumers use the AAA Consumer Arbitration
-                Rules; Businesses use the AAA Commercial Arbitration Rules (see adr.org).
-              </p>
-
-              {/* Consumers */}
-              <div className='rounded-lg border border-slate-200 p-4 space-y-2'>
-                <p className='font-medium'>If you are a “Consumer” (personal/household use)</p>
-                <ul className='list-disc pl-6 space-y-1 text-slate-700'>
-                  <li>No class arbitrations or class actions; only individual claims.</li>
-                  <li>
-                    You pay the consumer filing fee; Dayos pays remaining AAA fees for your claim.
-                  </li>
-                  <li>
-                    Claims ≤ $25,000 use document-only procedures; otherwise, hearings (if any) are
-                    by tele/videoconference unless an in-person hearing is appropriate.
-                  </li>
-                  <li>
-                    Parties will seek protective orders for confidential/trade secret/sensitive
-                    materials before any exchange.
-                  </li>
-                  <li>Applicable provisions of the Federal Rules of Civil Procedure apply.</li>
-                  <li>
-                    The arbitrator’s decision follows these Terms, is final and binding, and may be
-                    enforced in any court with jurisdiction.
-                  </li>
-                  <li>
-                    For coordinated filings of 25+ similar claims, the AAA Supplementary Rules for
-                    Multiple Case Filings and Multiple Consumer Case Filing Fee Schedule apply,
-                    including a bellwether process.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Businesses */}
-              <div className='rounded-lg border border-slate-200 p-4 space-y-2'>
-                <p className='font-medium'>If you are a “Business” (not a Consumer)</p>
-                <ul className='list-disc pl-6 space-y-1 text-slate-700'>
-                  <li>No class arbitrations or class actions; only individual claims.</li>
-                  <li>Any in-person appearances are held in Alameda County, California, U.S.A.</li>
-                  <li>
-                    The arbitrator’s decision follows these Terms, is final and binding, and may be
-                    enforced in any court with jurisdiction.
-                  </li>
-                  <li>
-                    Parties will seek protective orders for confidential/trade secret/sensitive
-                    materials before any exchange.
-                  </li>
-                  <li>Federal Rule of Civil Procedure 68 applies.</li>
-                  <li>
-                    For coordinated filings of 25+ similar claims, the AAA Supplementary Rules for
-                    Multiple Case Filings apply, including a bellwether process.
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </address>
           </section>
         </article>
       </div>
     </main>
   );
-};
-
-export default TermsContent;
+}
