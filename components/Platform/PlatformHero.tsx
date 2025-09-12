@@ -21,11 +21,11 @@ export const PlatformHero = React.forwardRef<HTMLElement>((_, ref) => {
               you work with.
             </p>
             <a
-              href='https://forms.fillout.com/t/nAxnDSwePjus'
+              href='https://forms.fillout.com/t/uZfJaWkLmpus'
               target='_blank'
               className='px-6 md:px-8 py-3 md:py-4 hover:bg-[#00C4CC] hover:text-black transition-all duration-300 ease-in-out text-[18px] md:text-[20px] font-semibold text-black bg-white rounded-lg'
             >
-              Apply For Closed Beta
+              Explore A Pilot For Your Team
             </a>
           </div>
 
@@ -33,7 +33,7 @@ export const PlatformHero = React.forwardRef<HTMLElement>((_, ref) => {
             <div className='absolute w-full h-full max-w-[470px] max-h-[470px] bg-[#00C4CC]/30 rounded-full blur-3xl' />
 
             <img
-              src='/imgs/introMacbookEvroDash.png'
+              src='/imgs/EvroMacbookHeroShot.png'
               alt='Evro AI assistants displayed on a MacBook screen'
               className='relative z-10 w-full h-full object-contain drop-shadow-2xl'
             />

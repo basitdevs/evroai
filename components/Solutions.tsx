@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { FaPause, FaPlay } from "react-icons/fa";
-import { FiUsers, FiAward, FiShield } from "react-icons/fi"; // Using react-icons for icons
+import { FiUsers, FiAward, FiShield } from "react-icons/fi";
 
 const solutionsData = [
   {
@@ -48,7 +48,7 @@ const solutionsData = [
         isPopular: true,
       },
     },
-    accentColor: "rgba(227, 242, 253, 1)", // A light blue
+    accentColor: "rgba(227, 242, 253, 1)",
     buttonText: "Solutions For Team Leaders",
   },
   {
@@ -70,12 +70,11 @@ const solutionsData = [
         isPopular: false,
       },
     },
-    accentColor: "rgba(232, 230, 245, 1)", // A light purple
-    buttonText: "Solutions For Team Leaders",
+    accentColor: "rgba(232, 230, 245, 1)",
+    buttonText: "Solutions For HR Teams",
   },
 ];
 
-// const Solutions: React.FC = () => {
 export const Solutions = React.forwardRef<HTMLElement>((_, ref) => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);

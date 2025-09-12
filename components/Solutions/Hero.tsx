@@ -33,8 +33,8 @@ const Hero: React.FC = () => {
             <div className='flex-grow flex flex-col border-t border-gray-100'>
               {solutionsData.map((solution) => (
                 <Link
-                  to={solution.id}
-                  href={solution.href}
+                  key={solution.id} 
+                  to={solution.href}
                   onMouseEnter={() => setActiveRoleId(solution.id)}
                   className={`group flex justify-between items-center py-5 px-6 border-b border-gray-100 transition-colors duration-300 ease-in-out ${
                     activeRoleId === solution.id ? "bg-[#00C4CC]/6" : "bg-transparent"

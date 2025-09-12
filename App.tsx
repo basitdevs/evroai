@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
-import Privacy from "./pages/Privacy";
 import Home from "./pages/Home";
 import Terms from "./pages/Terms";
 
@@ -17,17 +16,26 @@ import SaleAndMarketing from "./pages/SaleAndMarketing";
 import ITTeams from "./pages/ITTeams";
 import OpreationTeam from "./pages/OpreationTeams";
 import FinanceTeams from "./pages/FinanceTeams";
+import useHashScroll from "./hooks/useHashScroll";
+import ExecutiveTeams from "./pages/ExecutiveTeams";
+import Privacy from "./pages/Privacy";
 
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Animate only once
+      duration: 1000,
+      once: true,
     });
   }, []);
 
+  const ScrollController = () => {
+    useHashScroll();
+    return null;
+  };
+
   return (
     <>
+      <ScrollController />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/solutions' element={<SolutionPage />} />
@@ -38,7 +46,7 @@ function App() {
         <Route path='/solutions/it' element={<ITTeams />} />
         <Route path='/solutions/operations' element={<OpreationTeam />} />
         <Route path='/solutions/finance' element={<FinanceTeams />} />
-        <Route path='/solutions/executive' element={<FinanceTeams />} />
+        <Route path='/solutions/executive' element={<ExecutiveTeams />} />
         <Route path='/platform' element={<PlatformPage />} />
         <Route path='/company' element={<CompanyPage />} />
         <Route path='/privacy-statement' element={<Privacy />} />
